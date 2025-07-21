@@ -139,7 +139,7 @@ describe('Telegram Badge API', () => {
       .createHash('md5')
       .update(JSON.stringify({
         token: 'test_token_for_etag',
-        chatId: '@test_chat_for_etag',
+        channelId: '@test_chat_for_etag',
         query: {},
         time: Math.floor(fixedTime / 300000)
       }))

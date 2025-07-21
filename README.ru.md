@@ -15,68 +15,67 @@
 
 Этот проект генерирует SVG-бейдж с текущим количеством участников вашей Telegram-группы. Идеально подходит для отображения активности сообщества в README на GitHub или на сайте.
 
-## 🚀 Демо
+## 🚀 Быстрый старт
 
-![Telegram Group Members](https://telegram-badge.vercel.app/api/telegram-badge)
+Просто используйте параметры URL для генерации бейджей для любого Telegram-канала или группы:
+
+```
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
+```
+
+![Telegram Group Members](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat)
 
 ---
 
 ## 📦 Стек
 
-- Node.js / Bun
+- Node.js / TypeScript
 - Telegram Bot API
 - Vercel (Serverless API)
+- Jest для тестирования
 
 ---
 
-## 🛠 Установка
+## 🧩 Использование
 
-1. Клонируйте репозиторий:
+### Основной метод: параметры URL (настройка не требуется!)
+
+Просто добавьте ID вашего Telegram-канала/группы к URL:
+
+```markdown
+![Telegram Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel)
+```
+
+Вот и всё! Не нужно разворачивать проект, не нужен токен бота.
+
+### Альтернативный метод: самостоятельный хостинг
+
+Для продвинутых пользователей, которые хотят развернуть собственный экземпляр:
+
+#### 1. Предварительные требования
+- Токен Telegram-бота (создайте через [@BotFather](https://t.me/botfather))
+- Аккаунт Vercel (или любой хостинг Node.js)
+
+#### 2. Деплой на Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fchatman-media%2Ftelegram-badge)
+
+Установите переменные окружения:
+- `BOT_TOKEN`: Токен вашего Telegram-бота
+- `CHAT_ID`: ID чата по умолчанию (необязательно при использовании параметров URL)
+
+#### 3. Локальная разработка
 
 ```bash
 git clone https://github.com/chatman-media/telegram-badge.git
 cd telegram-badge
-```
-
-2. Установите зависимости:
-
-```bash
 npm install
-# или
-bun install
-```
 
-3. Создайте .env файл и добавьте:
+# Создайте .env файл
+echo "BOT_TOKEN=your_bot_token" > .env
+echo "CHAT_ID=@your_channel" >> .env
 
-```bash
-BOT_TOKEN=your_telegram_bot_token
-CHAT_ID=@your_group_username_or_chat_id
-```
-
-**Примечание:** Для публичных групп/каналов бота не нужно добавлять в группу. Для приватных групп бот должен быть участником.
-
-## 🧪 Локальный запуск
-
-```bash
 npm run dev
-# или
-bun dev
-```
-
-Открой в браузере: http://localhost:3000/api/telegram-badge
-
-## ☁️ Деплой на Vercel
-1.	Задеплойте репозиторий на vercel.com
-2.	В настройках проекта добавьте переменные окружения:
-	•	BOT_TOKEN
-	•	CHAT_ID
-
-## 🧩 Использование в GitHub README
-
-Добавьте следующую строку в ваш README.md:
-
-```markdown
-![Telegram Group Badge](https://telegram-badge.vercel.app/api/telegram-badge)
 ```
 
 ### 🎨 Параметры стилизации
@@ -85,6 +84,7 @@ bun dev
 
 | Параметр | Описание | Значение по умолчанию |
 |----------|----------|------------------------|
+| `channelId` | ID или имя пользователя Telegram-чата (например, `@timelinestudiochat`) | Из окружения |
 | `style` | Стиль бейджа | `flat` |
 | `label` | Текст метки | `Telegram` |
 | `color` | Цвет основной части бейджа | `2AABEE` (цвет Telegram) |
@@ -103,61 +103,73 @@ bun dev
 
 Стандартный бейдж (стиль flat):
 ```
-https://telegram-badge.vercel.app/api/telegram-badge
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
 ```
-![Flat](https://telegram-badge.vercel.app/api/telegram-badge)
+![Flat](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat)
 
 Бейдж со стилем plastic:
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?style=plastic
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=plastic
 ```
-![Plastic](https://telegram-badge.vercel.app/api/telegram-badge?style=plastic)
+![Plastic](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=plastic)
 
 Бейдж со стилем flat-square:
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?style=flat-square
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=flat-square
 ```
-![Flat-Square](https://telegram-badge.vercel.app/api/telegram-badge?style=flat-square)
+![Flat-Square](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=flat-square)
 
 Бейдж со стилем for-the-badge:
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=for-the-badge
 ```
-![For-The-Badge](https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge)
+![For-The-Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=for-the-badge)
 
 Бейдж со стилем social:
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?style=social
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=social
 ```
-![Social](https://telegram-badge.vercel.app/api/telegram-badge?style=social)
+![Social](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=social)
 
 Бейдж с кастомной меткой и цветом:
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?label=Наш%20Чат&color=00FF00
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&label=Наш%20Чат&color=00FF00
 ```
-![Custom](https://telegram-badge.vercel.app/api/telegram-badge?label=Наш%20Чат&color=00FF00)
+![Custom](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&label=Наш%20Чат&color=00FF00)
 
 Полностью кастомизированный бейдж:
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge&label=Сообщество&color=FF5733&labelColor=1A1A1A
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=for-the-badge&label=Сообщество&color=FF5733&labelColor=1A1A1A
 ```
-![Full Custom](https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge&label=Сообщество&color=FF5733&labelColor=1A1A1A)
+![Full Custom](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=for-the-badge&label=Сообщество&color=FF5733&labelColor=1A1A1A)
 
 Бейдж без логотипа:
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?logo=false
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&logo=false
 ```
-![No Logo](https://telegram-badge.vercel.app/api/telegram-badge?logo=false)
+![No Logo](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&logo=false)
 
-## 🧠 Возможности
+Бейдж для конкретного канала:
+```
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
+```
+
+Бейдж с пользовательским стилем:
+```
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=for-the-badge&color=FF5733
+```
+
+## ✨ Возможности
 
 - 👥 Отображение количества участников в реальном времени
+- 🔗 Прямые параметры URL - настройка не требуется!
 - 🎨 Полная кастомизация внешнего вида бейджа
-- 🔒 Поддержка .env и переменных Vercel для безопасного хранения токенов
+- 🔒 Опциональный самостоятельный хостинг с безопасным хранением токенов
 - ⚡ Оптимизированное кэширование для быстрой загрузки
 - 🛡️ Обработка ошибок с информативными сообщениями
-- 🆓 Бесплатно на Vercel при обычной нагрузке
+- 🆓 Бесплатное использование
 - 📡 Можно расширить до отображения активности / количества сообщений
+- 🧪 Полный набор тестов с TypeScript
 
 ## 🔧 Использование API
 
@@ -224,7 +236,7 @@ npm run build
 [![twitch](https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white&labelColor=1c1917)](https://www.twitch.tv/chatman1984)
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=1c1917)](https://www.youtube.com/@chatman-media)
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1c1917)](https://t.me/alexanderkireyev)
-[![X](https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white&labelColor=1c1917)](https://x.com/chatman_media)
+[![X](https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white&labelColor=1c1917)](https://x.com/timelinestudiochat)
 
 ## Поддержка 💝🚀
 

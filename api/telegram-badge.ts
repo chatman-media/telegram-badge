@@ -33,24 +33,29 @@ const logger = {
   }
 };
 
-const validateEnvironment = (): { token: string; chatId: string } => {
+const validateEnvironment = (query?: Record<string, any>): { token: string; channelId: string } => {
   const token = process.env.BOT_TOKEN;
-  const chatId = process.env.CHAT_ID;
+  let channelId = process.env.CHAT_ID;
+  
+  // Check if channelId is provided via URL parameter
+  if (query?.channelId) {
+    channelId = Array.isArray(query.channelId) ? query.channelId[0] : query.channelId;
+  }
   
   if (!token) {
     throw new Error("Missing BOT_TOKEN environment variable");
   }
   
-  if (!chatId) {
-    throw new Error("Missing CHAT_ID environment variable");
+  if (!channelId) {
+    throw new Error("Missing CHAT_ID environment variable or channelId parameter");
   }
   
-  return { token, chatId };
+  return { token, channelId };
 };
 
-const getMemberCount = async (token: string, chatId: string): Promise<number> => {
-  const apiUrl = `https://api.telegram.org/bot${token}/getChatMemberCount?chat_id=${encodeURIComponent(chatId)}`;
-  logger.debug('Fetching member count', { chatId });
+const getMemberCount = async (token: string, channelId: string): Promise<number> => {
+  const apiUrl = `https://api.telegram.org/bot${token}/getChatMemberCount?chat_id=${encodeURIComponent(channelId)}`;
+  logger.debug('Fetching member count', { channelId });
   
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 5000);
@@ -188,10 +193,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     });
     
     // Early check for environment variables
-    if (!process.env.BOT_TOKEN || !process.env.CHAT_ID) {
+    const chatIdFromQuery = req.query?.channelId;
+    if (!process.env.BOT_TOKEN || (!process.env.CHAT_ID && !chatIdFromQuery)) {
       logger.error('Missing environment variables', {
         BOT_TOKEN: !!process.env.BOT_TOKEN,
-        CHAT_ID: !!process.env.CHAT_ID
+        CHAT_ID: !!process.env.CHAT_ID,
+        chatIdFromQuery: !!chatIdFromQuery
       });
       const errorBadge = createErrorBadge('Missing Config');
       res.setHeader("Content-Type", "image/svg+xml");
@@ -200,14 +207,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       return;
     }
     
-    const { token, chatId } = validateEnvironment();
-    logger.debug('Environment validated', { chatId });
+    const { token, channelId } = validateEnvironment(req.query);
+    logger.debug('Environment validated', { channelId });
 
     const ifNoneMatch = req.headers['if-none-match'];
     
     const requestEtag = `"${crypto
       .createHash('md5')
-      .update(JSON.stringify({ token, chatId, query: req.query, time: Math.floor(Date.now() / 300000) }))
+      .update(JSON.stringify({ token, channelId, query: req.query, time: Math.floor(Date.now() / 300000) }))
       .digest('hex')}"`;
     
     if (ifNoneMatch && ifNoneMatch === requestEtag) {
@@ -216,7 +223,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       return;
     }
     
-    const members = await getMemberCount(token, chatId);
+    const members = await getMemberCount(token, channelId);
     logger.info('Member count fetched', { members });
     
     const badgeOptions: BadgeOptions = {

@@ -53,5 +53,5 @@ export interface Response {
 
 export interface Environment {
   token: string;
-  chatId: string;
+  channelId: string;
 }

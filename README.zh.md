@@ -15,9 +15,15 @@
 
 本项目生成显示 Telegram 群组当前成员数量的 SVG 徽章。非常适合在 GitHub README 文件或网站上展示社区活跃度。
 
-## 🚀 演示
+## 🚀 快速开始
 
-![Telegram 群组成员](https://telegram-badge.vercel.app/api/telegram-badge)
+只需使用 URL 参数即可为任何 Telegram 频道或群组生成徽章：
+
+```
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
+```
+
+![Telegram 群组成员](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat)
 
 ---
 
@@ -30,56 +36,48 @@
 
 ---
 
-## 🛠 安装
+## 🧩 使用方法
 
-1. 克隆仓库：
+### 主要方法：URL 参数（无需任何设置！）
+
+只需将您的 Telegram 频道/群组 ID 添加到 URL：
+
+```markdown
+![Telegram Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel)
+```
+
+就这样！无需部署，无需机器人令牌。
+
+### 替代方法：自托管部署
+
+对于想要托管自己实例的高级用户：
+
+#### 1. 先决条件
+- Telegram 机器人令牌（通过 [@BotFather](https://t.me/botfather) 创建）
+- Vercel 账户（或任何 Node.js 托管）
+
+#### 2. 部署到 Vercel
+
+[![使用 Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fchatman-media%2Ftelegram-badge)
+
+设置环境变量：
+- `BOT_TOKEN`：您的 Telegram 机器人令牌
+- `CHAT_ID`：默认聊天 ID（如果使用 URL 参数则可选）
+
+#### 3. 本地开发
 
 ```bash
 git clone https://github.com/chatman-media/telegram-badge.git
 cd telegram-badge
-```
-
-2. 安装依赖：
-
-```bash
 npm install
-# 或
-bun install
-```
 
-3. 创建 .env 文件并添加：
+# 创建 .env 文件
+echo "BOT_TOKEN=your_bot_token" > .env
+echo "CHAT_ID=@your_channel" >> .env
 
-```bash
-BOT_TOKEN=your_telegram_bot_token
-CHAT_ID=@your_group_username_or_chat_id
-```
-
-**注意：** 对于公开群组/频道，机器人无需添加为成员。对于私有群组，机器人必须是群组成员。
-
-## 🧪 本地开发
-
-```bash
 npm run dev
-# 或
-bun dev
 ```
 
-在浏览器中打开：http://localhost:3000/api/telegram-badge
-
-## ☁️ 部署到 Vercel
-
-1. 将仓库部署到 vercel.com
-2. 在项目设置中添加环境变量：
-   - BOT_TOKEN
-   - CHAT_ID
-
-## 🧩 在 GitHub README 中使用
-
-在您的 README.md 中添加以下代码：
-
-```markdown
-![Telegram 群组徽章](https://telegram-badge.vercel.app/api/telegram-badge)
-```
 
 ### 🎨 样式参数
 
@@ -87,6 +85,7 @@ bun dev
 
 | 参数 | 描述 | 默认值 |
 |------|------|--------|
+| `channelId` | Telegram 聊天 ID 或用户名（例如 `@timelinestudiochat`） | 从环境变量 |
 | `style` | 徽章样式 | `flat` |
 | `label` | 标签文本 | `Telegram` |
 | `color` | 主徽章颜色 | `2AABEE`（Telegram 颜色） |
@@ -105,60 +104,71 @@ bun dev
 
 标准徽章（扁平样式）：
 ```
-https://telegram-badge.vercel.app/api/telegram-badge
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
 ```
-![Flat](https://telegram-badge.vercel.app/api/telegram-badge)
+![Flat](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat)
 
 立体样式徽章：
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?style=plastic
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=plastic
 ```
-![Plastic](https://telegram-badge.vercel.app/api/telegram-badge?style=plastic)
+![Plastic](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=plastic)
 
 方形扁平样式徽章：
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?style=flat-square
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=flat-square
 ```
-![Flat-Square](https://telegram-badge.vercel.app/api/telegram-badge?style=flat-square)
+![Flat-Square](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=flat-square)
 
 for-the-badge 样式徽章：
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=for-the-badge
 ```
-![For-The-Badge](https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge)
+![For-The-Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=for-the-badge)
 
 社交样式徽章：
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?style=social
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=social
 ```
-![Social](https://telegram-badge.vercel.app/api/telegram-badge?style=social)
+![Social](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=social)
 
 自定义标签和颜色的徽章：
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?label=加入聊天&color=00FF00
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&label=加入聊天&color=00FF00
 ```
-![Custom](https://telegram-badge.vercel.app/api/telegram-badge?label=加入聊天&color=00FF00)
+![Custom](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&label=加入聊天&color=00FF00)
 
 完全自定义徽章：
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge&label=社区&color=FF5733&labelColor=1A1A1A
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=for-the-badge&label=社区&color=FF5733&labelColor=1A1A1A
 ```
-![Full Custom](https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge&label=社区&color=FF5733&labelColor=1A1A1A)
+![Full Custom](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=for-the-badge&label=社区&color=FF5733&labelColor=1A1A1A)
 
 无标志徽章：
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?logo=false
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&logo=false
 ```
-![No Logo](https://telegram-badge.vercel.app/api/telegram-badge?logo=false)
+![No Logo](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&logo=false)
+
+特定频道的徽章：
+```
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
+```
+
+带自定义样式的徽章：
+```
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=for-the-badge&color=FF5733
+```
 
 ## ✨ 功能特性
 
 - 👥 实时显示成员数量
+- 🔗 直接 URL 参数 - 无需任何设置！
 - 🎨 完全自定义徽章外观
-- 🔒 支持 .env 和 Vercel 环境变量以安全存储令牌
+- 🔒 可选的自托管与安全令牌存储
 - ⚡ 优化缓存以实现快速加载
 - 🛡️ 错误处理和信息提示
-- 🆓 在 Vercel 上正常使用免费
+- 🆓 免费使用
 - 📡 可扩展显示活动/消息计数
 - 🧪 使用 TypeScript 的完整测试套件
 
