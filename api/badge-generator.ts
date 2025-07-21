@@ -25,7 +25,7 @@ export function generateBadgeSVG(format: BadgeFormat): string {
   
   // Calculate proper text length for label
   // When logo is present, we have less space for text
-  const labelTextLength = logo ? (labelWidth - logoSpace - 5) * 10 : (labelWidth - 10) * 10;
+  const labelTextLength = logo ? (labelWidth - logoSpace) * 10 : (labelWidth) * 10;
   
   // Create logo element
   const logoElement = logo ? `<image x="5" y="3" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
