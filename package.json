@@ -39,9 +39,6 @@
     "prepublishOnly": "npm run build:local && npm test",
     "prepack": "npm run build:local"
   },
-  "dependencies": {
-    "badge-maker": "^5.0.2"
-  },
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "^24.0.15",
