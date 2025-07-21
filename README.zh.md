@@ -229,6 +229,22 @@ npm run build
 4. 推送到分支（`git push origin feature/amazing-feature`）
 5. 打开一个 Pull Request
 
+## 支持 💝🚀
+
+- **BTC:** 14s9Y9Rb2CUWHSAatiQMhfkpx1MWXofUzw
+- **TON:** UQD1M80nPyzph5ZW1vfp_r19XI5MaerNhDq4dWXbXCo96WFj
+- **NOT:** UQD1M80nPyzph5ZW1vfp_r19XI5MaerNhDq4dWXbXCo96WFj
+- **ETH:** 0x286D65151b622dCC16624cEd8463FDa45585fd60
+
+<div align="center">
+
+  <img src="public/btc.png" alt="BTC" style="height: 205px" />
+  <img src="public/ton.png" alt="TON" style="height: 205px" />
+  <img src="public/not.png" alt="NOT" style="height: 205px" />
+  <img src="public/eth.png" alt="ETH" style="height: 205px" />
+
+</div>
+
 ## 📜 许可证
 
 本项目根据 MIT 许可证获得许可 - 有关详细信息，请参阅 [LICENSE](LICENSE) 文件。
