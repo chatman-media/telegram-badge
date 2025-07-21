@@ -23,6 +23,9 @@ export function generateBadgeSVG(format: BadgeFormat): string {
   const messageWidth = message.length * 6.5 + 20;
   const totalWidth = labelWidth + messageWidth;
   
+  // Text length should not include logo space
+  const labelTextLength = (labelWidth - 20) * 10; // Base text length without logo consideration
+  
   // Create logo element
   const logoElement = logo ? `<image x="5" y="3" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
   
@@ -39,7 +42,7 @@ export function generateBadgeSVG(format: BadgeFormat): string {
       </g>
       ${logoForBadge}
       <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
-        <text x="${(labelWidth / 2 + textOffset) * 10}" y="185" transform="scale(.1)" fill="#fff" textLength="${(labelWidth - 20 - logoSpace) * 10}">${label.toUpperCase()}</text>
+        <text x="${(labelWidth / 2 + textOffset) * 10}" y="185" transform="scale(.1)" fill="#fff" textLength="${labelTextLength}">${label.toUpperCase()}</text>
         <text x="${(labelWidth + messageWidth / 2) * 10}" y="185" font-weight="bold" transform="scale(.1)" fill="#fff" textLength="${(messageWidth - 20) * 10}">${message.toUpperCase()}</text>
       </g>
     </svg>`;
@@ -126,8 +129,8 @@ export function generateBadgeSVG(format: BadgeFormat): string {
     </g>
     ${logoElement}
     <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-      <text aria-hidden="true" x="${(labelWidth / 2 + textOffset) * 10}" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="${(labelWidth - 10 - logoSpace) * 10}">${label}</text>
-      <text x="${(labelWidth / 2 + textOffset) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${(labelWidth - 10 - logoSpace) * 10}">${label}</text>
+      <text aria-hidden="true" x="${(labelWidth / 2 + textOffset) * 10}" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="${labelTextLength - 100}">${label}</text>
+      <text x="${(labelWidth / 2 + textOffset) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${labelTextLength - 100}">${label}</text>
       <text aria-hidden="true" x="${(labelWidth + messageWidth / 2) * 10}" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="${(messageWidth - 10) * 10}">${message}</text>
       <text x="${(labelWidth + messageWidth / 2) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${(messageWidth - 10) * 10}">${message}</text>
     </g>
