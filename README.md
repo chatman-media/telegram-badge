@@ -1,6 +1,6 @@
 # 🛡️ Telegram Group Badge Generator
 
-[🇷🇺 Русская версия](README.ru.md) | [🇺🇸 English](README.md)
+[🇷🇺 Русский](README.ru.md) | [🇺🇸 English](README.md) | [🇨🇳 中文](README.zh.md)
 
 [![Build Status](https://github.com/chatman-media/telegram-badge/workflows/CI/badge.svg)](https://github.com/chatman-media/telegram-badge/actions)
 [![npm version](https://badge.fury.io/js/telegram-badge.svg)](https://badge.fury.io/js/telegram-badge)
