@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Badge Generator</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .badge-demo {
+            text-align: center;
+            margin: 30px 0;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🛡️ Telegram Badge Generator</h1>
+    
+    <p>Generate SVG badges with your Telegram group member count.</p>
+    
+    <div class="badge-demo">
+        <h2>Demo Badge:</h2>
+        <img src="/api/telegram-badge" alt="Telegram Badge" />
+    </div>
+    
+    <h2>Usage</h2>
+    <p>Add this to your README:</p>
+    <code>![Telegram Badge](https://your-domain.vercel.app/api/telegram-badge)</code>
+    
+    <h2>API Endpoint</h2>
+    <p><code>GET /api/telegram-badge</code></p>
+    
+    <h2>Parameters</h2>
+    <ul>
+        <li><code>style</code> - Badge style (flat, plastic, flat-square, for-the-badge, social)</li>
+        <li><code>label</code> - Badge label text</li>
+        <li><code>color</code> - Badge color (hex without #)</li>
+        <li><code>labelColor</code> - Label color (hex without #)</li>
+    </ul>
+    
+    <h2>GitHub Repository</h2>
+    <p><a href="https://github.com/chatman-media/telegram-badge">View on GitHub</a></p>
+</body>
+</html>
