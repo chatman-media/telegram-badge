@@ -87,37 +87,54 @@ bun dev
 #### Доступные стили:
 
 - `flat` - плоский стиль (по умолчанию)
-- `plastic` - объемный стиль
-- `flat-square` - плоский квадратный стиль
+- `plastic` - объемный стиль с градиентом
+- `flat-square` - плоский стиль без закруглений
 - `for-the-badge` - широкий стиль с заглавными буквами
-- `social` - социальный стиль
+- `social` - стиль как у GitHub
 
 #### Примеры:
 
-Стандартный бейдж:
+Стандартный бейдж (стиль flat):
 ```
 https://telegram-badge.vercel.app/api/telegram-badge
 ```
+![Flat](https://telegram-badge.vercel.app/api/telegram-badge)
 
-Бейдж с кастомной меткой:
+Бейдж со стилем plastic:
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?label=Our%20Group
+https://telegram-badge.vercel.app/api/telegram-badge?style=plastic
 ```
+![Plastic](https://telegram-badge.vercel.app/api/telegram-badge?style=plastic)
 
-Бейдж с кастомным цветом:
+Бейдж со стилем flat-square:
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?color=FF0000
+https://telegram-badge.vercel.app/api/telegram-badge?style=flat-square
 ```
+![Flat-Square](https://telegram-badge.vercel.app/api/telegram-badge?style=flat-square)
 
-Бейдж с кастомным стилем:
+Бейдж со стилем for-the-badge:
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge
 ```
+![For-The-Badge](https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge)
+
+Бейдж со стилем social:
+```
+https://telegram-badge.vercel.app/api/telegram-badge?style=social
+```
+![Social](https://telegram-badge.vercel.app/api/telegram-badge?style=social)
+
+Бейдж с кастомной меткой и цветом:
+```
+https://telegram-badge.vercel.app/api/telegram-badge?label=Наш%20Чат&color=00FF00
+```
+![Custom](https://telegram-badge.vercel.app/api/telegram-badge?label=Наш%20Чат&color=00FF00)
 
 Полностью кастомизированный бейдж:
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?style=social&label=Join%20Us&color=FF5733&labelColor=333333
+https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge&label=Сообщество&color=FF5733&labelColor=1A1A1A
 ```
+![Full Custom](https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge&label=Сообщество&color=FF5733&labelColor=1A1A1A)
 
 ## 🧠 Возможности
 

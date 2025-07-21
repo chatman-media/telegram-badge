@@ -90,36 +90,53 @@ You can customize the badge appearance using the following parameters:
 
 - `flat` - flat style (default)
 - `plastic` - plastic style with gradient
-- `flat-square` - flat square style
+- `flat-square` - flat square style without rounded corners
 - `for-the-badge` - wide style with uppercase letters
-- `social` - social style
+- `social` - GitHub social style
 
 #### Examples:
 
-Standard badge:
+Standard badge (flat style):
 ```
 https://telegram-badge.vercel.app/api/telegram-badge
 ```
+![Flat](https://telegram-badge.vercel.app/api/telegram-badge)
 
-Badge with custom label:
+Badge with plastic style:
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?label=Our%20Group
+https://telegram-badge.vercel.app/api/telegram-badge?style=plastic
 ```
+![Plastic](https://telegram-badge.vercel.app/api/telegram-badge?style=plastic)
 
-Badge with custom color:
+Badge with flat-square style:
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?color=FF0000
+https://telegram-badge.vercel.app/api/telegram-badge?style=flat-square
 ```
+![Flat-Square](https://telegram-badge.vercel.app/api/telegram-badge?style=flat-square)
 
-Badge with custom style:
+Badge with for-the-badge style:
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge
 ```
+![For-The-Badge](https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge)
+
+Badge with social style:
+```
+https://telegram-badge.vercel.app/api/telegram-badge?style=social
+```
+![Social](https://telegram-badge.vercel.app/api/telegram-badge?style=social)
+
+Badge with custom label and color:
+```
+https://telegram-badge.vercel.app/api/telegram-badge?label=Join%20Chat&color=00FF00
+```
+![Custom](https://telegram-badge.vercel.app/api/telegram-badge?label=Join%20Chat&color=00FF00)
 
 Fully customized badge:
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?style=social&label=Join%20Us&color=FF5733&labelColor=333333
+https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge&label=Community&color=FF5733&labelColor=1A1A1A
 ```
+![Full Custom](https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge&label=Community&color=FF5733&labelColor=1A1A1A)
 
 ## ✨ Features
 
