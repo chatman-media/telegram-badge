@@ -1,0 +1,25 @@
+# Development files
+tests/
+.github/
+vercel.json
+.vercel/
+jest.config.js
+tsconfig.json
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build cache
+*.tsbuildinfo
+coverage/
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

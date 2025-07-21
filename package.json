@@ -1,13 +1,35 @@
 {
   "name": "telegram-badge",
   "version": "1.0.0",
+  "description": "Generate Telegram group member count badges for GitHub README",
+  "keywords": ["telegram", "badge", "svg", "group", "members", "api"],
+  "author": "Chatman Media",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chatman-media/telegram-badge.git"
+  },
+  "homepage": "https://github.com/chatman-media/telegram-badge",
+  "bugs": {
+    "url": "https://github.com/chatman-media/telegram-badge/issues"
+  },
   "type": "commonjs",
+  "main": "dist/api/telegram-badge.js",
+  "types": "dist/api/telegram-badge.d.ts",
+  "files": [
+    "dist",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "dev": "vercel dev",
     "start": "vercel dev",
     "test": "jest",
     "build": "tsc",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test",
+    "prepack": "npm run build"
   },
   "dependencies": {
     "badge-maker": "^5.0.2"
