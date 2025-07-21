@@ -7,6 +7,7 @@ interface BadgeOptions {
   label?: string;
   color?: string;
   labelColor?: string;
+  logo?: boolean;
 }
 
 interface TelegramApiResponse {
@@ -99,13 +100,14 @@ const validateStyleOptions = (options: BadgeOptions): Required<BadgeOptions> => 
   const label = options.label || 'Telegram';
   const color = options.color || '2AABEE';
   const labelColor = options.labelColor || '555555';
+  const logo = options.logo !== false; // Logo by default
   
-  return { style, label, color, labelColor };
+  return { style, label, color, labelColor, logo };
 };
 
 const createBadge = (members: number, options: BadgeOptions): string => {
-  const { style, label, color, labelColor } = validateStyleOptions(options);
-  logger.debug('Creating badge', { style, label, color, labelColor });
+  const { style, label, color, labelColor, logo } = validateStyleOptions(options);
+  logger.debug('Creating badge', { style, label, color, labelColor, logo });
   
   const normalizedColor = color.replace(/^#/, '');
   const normalizedLabelColor = labelColor.replace(/^#/, '');
@@ -115,7 +117,8 @@ const createBadge = (members: number, options: BadgeOptions): string => {
     message: `${members} members`,
     color: `#${normalizedColor}`,
     labelColor: `#${normalizedLabelColor}`,
-    style
+    style,
+    logo
   };
   
   return generateBadgeSVG(format);
@@ -127,7 +130,8 @@ const createErrorBadge = (errorMessage: string): string => {
     message: errorMessage,
     color: '#e05d44',
     labelColor: '#555555',
-    style: 'flat'
+    style: 'flat',
+    logo: false
   };
   
   return generateBadgeSVG(format);
@@ -219,7 +223,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       style: req.query.style as BadgeOptions['style'],
       label: Array.isArray(req.query.label) ? req.query.label[0] : req.query.label,
       color: Array.isArray(req.query.color) ? req.query.color[0] : req.query.color,
-      labelColor: Array.isArray(req.query.labelColor) ? req.query.labelColor[0] : req.query.labelColor
+      labelColor: Array.isArray(req.query.labelColor) ? req.query.labelColor[0] : req.query.labelColor,
+      logo: req.query.logo !== 'false' // Logo enabled by default, only disabled with logo=false
     };
     
     const svg = createBadge(members, badgeOptions);

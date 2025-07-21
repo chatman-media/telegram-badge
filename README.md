@@ -48,7 +48,7 @@ BOT_TOKEN=your_telegram_bot_token
 CHAT_ID=@your_group_username_or_chat_id
 ```
 
-Make sure the bot is added to the group as an admin.
+**Note:** For public groups/channels, the bot doesn't need to be added as a member. For private groups, the bot must be added to the group.
 
 ## 🧪 Local Development
 
@@ -85,6 +85,7 @@ You can customize the badge appearance using the following parameters:
 | `label` | Label text | `Telegram` |
 | `color` | Main badge color | `2AABEE` (Telegram color) |
 | `labelColor` | Label color | `555555` |
+| `logo` | Show Telegram logo | `true` |
 
 #### Available styles:
 
@@ -137,6 +138,12 @@ Fully customized badge:
 https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge&label=Community&color=FF5733&labelColor=1A1A1A
 ```
 ![Full Custom](https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge&label=Community&color=FF5733&labelColor=1A1A1A)
+
+Badge without logo:
+```
+https://telegram-badge.vercel.app/api/telegram-badge?logo=false
+```
+![No Logo](https://telegram-badge.vercel.app/api/telegram-badge?logo=false)
 
 ## ✨ Features
 
