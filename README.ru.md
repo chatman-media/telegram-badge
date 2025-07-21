@@ -4,8 +4,11 @@
 
 [![Build Status](https://github.com/chatman-media/telegram-badge/workflows/CI/badge.svg)](https://github.com/chatman-media/telegram-badge/actions)
 [![npm version](https://badge.fury.io/js/telegram-badge.svg)](https://badge.fury.io/js/telegram-badge)
+[![npm downloads](https://img.shields.io/npm/dm/telegram-badge.svg)](https://www.npmjs.com/package/telegram-badge)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/telegram-badge)](https://bundlephobia.com/package/telegram-badge)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/chatman-media/telegram-badge?style=social)](https://github.com/chatman-media/telegram-badge)
 [![dev.to](https://img.shields.io/badge/dev.to-Article-0A0A0A.svg?style=flat&logo=dev.to)](https://dev.to/chatman-media/show-your-telegram-group-member-count-in-github-readme-46pl)
 [![X (Twitter)](https://img.shields.io/badge/Tweet-1DA1F2.svg?style=flat&logo=x&logoColor=white)](https://x.com/chatman_media/status/1947399700795244694)
 
@@ -155,8 +158,77 @@ https://telegram-badge.vercel.app/api/telegram-badge?logo=false
 - 🆓 Бесплатно на Vercel при обычной нагрузке
 - 📡 Можно расширить до отображения активности / количества сообщений
 
-⸻
+## 🔧 Использование API
 
-📜 Лицензия
+### Как npm пакет:
 
-MIT
+```bash
+npm install telegram-badge
+```
+
+```typescript
+import badgeHandler from 'telegram-badge';
+
+// Используйте в вашей serverless функции
+export default badgeHandler;
+```
+
+### Прямые вызовы API:
+
+```typescript
+GET /api/telegram-badge?style=flat&label=Участники&color=2AABEE&labelColor=555555
+```
+
+## 🧪 Тестирование
+
+Запустить тесты:
+
+```bash
+npm test
+```
+
+Проверка типов:
+
+```bash
+npm run type-check
+```
+
+Сборка проекта:
+
+```bash
+npm run build
+```
+
+## Подписывайтесь
+
+[![TikTok](https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white&labelColor=1c1917)](https://www.tiktok.com/@chatman.media)
+[![twitch](https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white&labelColor=1c1917)](https://www.twitch.tv/chatman1984)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=1c1917)](https://www.youtube.com/@chatman-media)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1c1917)](https://t.me/alexanderkireyev)
+[![X](https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white&labelColor=1c1917)](https://x.com/chatman_media)
+
+## История звёзд
+
+<a href="https://www.star-history.com/#chatman-media/telegram-badge&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=chatman-media/telegram-badge&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=chatman-media/telegram-badge&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=chatman-media/telegram-badge&type=Date" />
+ </picture>
+</a>
+
+## 🤝 Внести вклад
+
+1. Форкните репозиторий
+2. Создайте ветку для новой функции (`git checkout -b feature/amazing-feature`)
+3. Зафиксируйте изменения (`git commit -m 'Add some amazing feature'`)
+4. Отправьте ветку (`git push origin feature/amazing-feature`)
+5. Откройте Pull Request
+
+## 📜 Лицензия
+
+Этот проект лицензирован под лицензией MIT - подробности в файле [LICENSE](LICENSE).
+
+---
+
+Сделано с ❤️ от [Chatman Media](https://github.com/chatman-media)
