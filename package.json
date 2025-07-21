@@ -1,0 +1,13 @@
+{
+  "name": "telegram-badge",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^24.0.15"
+  }
+}

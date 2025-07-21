@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/telegram-badge.ts", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/telegram-badge", "dest": "api/telegram-badge.ts" }
+  ]
+}
