@@ -197,10 +197,6 @@ Build the project:
 npm run build
 ```
 
-## 📚 Documentation
-
-For detailed documentation in Russian, see [README.ru.md](README.ru.md).
-
 ## 🤝 Contributing
 
 1. Fork the repository

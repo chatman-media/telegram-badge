@@ -197,11 +197,6 @@ npm run type-check
 npm run build
 ```
 
-## 📚 文档
-
-有关英文详细文档，请参阅 [README.md](README.md)。
-有关俄文详细文档，请参阅 [README.ru.md](README.ru.md)。
-
 ## 🤝 贡献
 
 1. Fork 本仓库
