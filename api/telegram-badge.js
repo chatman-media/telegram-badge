@@ -3,17 +3,13 @@ module.exports = async function (req, res) {
   const chatId = process.env.CHAT_ID;
 
   if (!token || !chatId) {
-    return res
-      .status(500)
-      .send("Missing BOT_TOKEN or CHAT_ID. Check your Vercel Environment Variables.");
+    return res.status(500).send("Missing BOT_TOKEN or CHAT_ID");
   }
 
   try {
     const apiUrl = `https://api.telegram.org/bot${token}/getChatMembersCount?chat_id=${encodeURIComponent(chatId)}`;
     const response = await fetch(apiUrl);
     const data = await response.json();
-
-    console.log("Telegram API Response:", data);
 
     if (!data.ok) {
       return res.status(500).send(`Telegram API error: ${data.description}`);
@@ -31,9 +27,9 @@ module.exports = async function (req, res) {
 
     res.setHeader("Content-Type", "image/svg+xml");
     res.setHeader("Cache-Control", "no-cache");
-    return res.status(200).send(svg);
+    res.status(200).send(svg);
   } catch (err) {
-    console.error("Server error:", err);
-    return res.status(500).send(`Server error: ${err.message}`);
+    console.error(err);
+    res.status(500).send(`Server error: ${err.message}`);
   }
 };
