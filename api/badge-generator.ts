@@ -25,7 +25,7 @@ export function generateBadgeSVG(format: BadgeFormat): string {
   
   // Calculate proper text length for label
   // When logo is present, we have less space for text
-  const labelTextLength = logo ? (labelWidth - logoSpace - 10) * 10 : (labelWidth - 5) * 10;
+  const labelTextLength = logo ? (labelWidth) * 10 : (labelWidth - 5) * 10;
   
   // Create logo element
   const logoElement = logo ? `<image x="5" y="3" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
@@ -34,7 +34,7 @@ export function generateBadgeSVG(format: BadgeFormat): string {
   if (style === 'for-the-badge') {
     const logoForBadge = logo ? `<image x="5" y="7" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
     // For-the-badge uses slightly different text length calculation
-    const labelTextLengthForBadge = logo ? (labelWidth - logoSpace - 10) * 10 : (labelWidth - 10) * 10;
+    const labelTextLengthForBadge = logo ? (labelWidth - 10) * 10 : (labelWidth - 10) * 10;
     
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth}" height="28" role="img" aria-label="${label}: ${message}">
       <title>${label}: ${message}</title>
