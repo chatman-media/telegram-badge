@@ -31,8 +31,8 @@ export function generateBadgeSVG(format: BadgeFormat): string {
   
   // For-the-badge style
   if (style === 'for-the-badge') {
-    const logoForBadge = logo ? `<image x="8" y="7" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
-    const textOffset = logo ? 10 : 0;
+    const logoForBadge = logo ? `<image x="10" y="7" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
+    const textOffset = logo ? 12 : 0;
     
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth}" height="28" role="img" aria-label="${label}: ${message}">
       <title>${label}: ${message}</title>
@@ -42,7 +42,7 @@ export function generateBadgeSVG(format: BadgeFormat): string {
       </g>
       ${logoForBadge}
       <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
-        <text x="${(labelWidth / 2 + textOffset) * 10}" y="185" transform="scale(.1)" fill="#fff" textLength="${labelTextLength}">${label.toUpperCase()}</text>
+        <text x="${(labelWidth / 2 + textOffset) * 10}" y="185" transform="scale(.1)" fill="#fff" textLength="${(labelWidth - 30 - logoSpace) * 10}">${label.toUpperCase()}</text>
         <text x="${(labelWidth + messageWidth / 2) * 10}" y="185" font-weight="bold" transform="scale(.1)" fill="#fff" textLength="${(messageWidth - 20) * 10}">${message.toUpperCase()}</text>
       </g>
     </svg>`;
@@ -50,14 +50,16 @@ export function generateBadgeSVG(format: BadgeFormat): string {
   
   // Flat-square style
   if (style === 'flat-square') {
+    const textOffset = logo ? 10 : 0;
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth}" height="20" role="img" aria-label="${label}: ${message}">
       <title>${label}: ${message}</title>
       <g shape-rendering="crispEdges">
         <rect width="${labelWidth}" height="20" fill="${labelColor}"/>
         <rect x="${labelWidth}" width="${messageWidth}" height="20" fill="${color}"/>
       </g>
+      ${logoElement}
       <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-        <text x="${labelWidth / 2 * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${(labelWidth - 10) * 10}">${label}</text>
+        <text x="${(labelWidth / 2 + textOffset) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${labelTextLength - 100}">${label}</text>
         <text x="${(labelWidth + messageWidth / 2) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${(messageWidth - 10) * 10}">${message}</text>
       </g>
     </svg>`;
@@ -65,6 +67,9 @@ export function generateBadgeSVG(format: BadgeFormat): string {
   
   // Social style
   if (style === 'social') {
+    const textOffset = logo ? 10 : 0;
+    const socialLogoElement = logo ? `<image x="7" y="3" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
+    
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth + 4}" height="20" style="border-radius: 3px" role="img" aria-label="${label}: ${message}">
       <title>${label}: ${message}</title>
       <linearGradient id="s" x2="0" y2="100%">
@@ -79,8 +84,9 @@ export function generateBadgeSVG(format: BadgeFormat): string {
         <rect x="${labelWidth + 2}" width="${messageWidth + 2}" height="20" fill="${color}"/>
         <rect width="${totalWidth + 4}" height="20" fill="url(#s)"/>
       </g>
+      ${socialLogoElement}
       <g fill="#333" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-weight="700" font-size="110">
-        <text x="${(labelWidth / 2 + 1) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${(labelWidth - 10) * 10}">${label}</text>
+        <text x="${(labelWidth / 2 + 1 + textOffset) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${labelTextLength - 100}">${label}</text>
         <text x="${(labelWidth + messageWidth / 2 + 2) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${(messageWidth - 10) * 10}">${message}</text>
       </g>
     </svg>`;
@@ -88,6 +94,7 @@ export function generateBadgeSVG(format: BadgeFormat): string {
   
   // Plastic style
   if (style === 'plastic') {
+    const textOffset = logo ? 10 : 0;
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth}" height="20" role="img" aria-label="${label}: ${message}">
       <title>${label}: ${message}</title>
       <linearGradient id="s" x2="0" y2="100%">
@@ -104,8 +111,9 @@ export function generateBadgeSVG(format: BadgeFormat): string {
         <rect x="${labelWidth}" width="${messageWidth}" height="20" fill="${color}"/>
         <rect width="${totalWidth}" height="20" fill="url(#s)"/>
       </g>
+      ${logoElement}
       <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-        <text x="${labelWidth / 2 * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${(labelWidth - 10) * 10}">${label}</text>
+        <text x="${(labelWidth / 2 + textOffset) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${labelTextLength - 100}">${label}</text>
         <text x="${(labelWidth + messageWidth / 2) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${(messageWidth - 10) * 10}">${message}</text>
       </g>
     </svg>`;
