@@ -15,8 +15,7 @@ const TELEGRAM_LOGO = `<svg xmlns="http://www.w3.org/2000/svg" fill="white" view
 export function generateBadgeSVG(format: BadgeFormat): string {
   const { label, message, color, labelColor, style, logo } = format;
   
-  // Calculate logo space (14px icon + 3px gap)
-  const logoSpace = logo ? 17 : 0;
+  const logoSpace = logo ? 15 : 0;
   
   // Better text width calculation
   // Always add logoSpace to width calculation
@@ -26,7 +25,7 @@ export function generateBadgeSVG(format: BadgeFormat): string {
   
   // Calculate proper text length for label
   // When logo is present, we have less space for text
-  const labelTextLength = logo ? (labelWidth - logoSpace - 10) * 10 : (labelWidth - 10) * 10;
+  const labelTextLength = logo ? (labelWidth - logoSpace - 5) * 10 : (labelWidth - 10) * 10;
   
   // Create logo element
   const logoElement = logo ? `<image x="5" y="3" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
