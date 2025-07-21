@@ -1,8 +1,1 @@
-{
-  "version": 2,
-  "functions": {
-    "api/telegram-badge.ts": {
-      "runtime": "@vercel/node"
-    }
-  }
-}
+{}
