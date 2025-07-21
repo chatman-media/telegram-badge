@@ -1,4 +1,3 @@
-import { makeBadge } from 'badge-maker';
 import * as crypto from 'crypto';
 import { VercelRequest, VercelResponse } from '@vercel/node';
 
@@ -103,7 +102,8 @@ const validateStyleOptions = (options: BadgeOptions): Required<BadgeOptions> => 
   return { style, label, color, labelColor };
 };
 
-const createBadge = (members: number, options: BadgeOptions): string => {
+const createBadge = async (members: number, options: BadgeOptions): Promise<string> => {
+  const { makeBadge } = await import('badge-maker');
   const { style, label, color, labelColor } = validateStyleOptions(options);
   logger.debug('Creating badge', { style, label, color, labelColor });
   
@@ -121,7 +121,8 @@ const createBadge = (members: number, options: BadgeOptions): string => {
   return makeBadge(format as any);
 };
 
-const createErrorBadge = (errorMessage: string): string => {
+const createErrorBadge = async (errorMessage: string): Promise<string> => {
+  const { makeBadge } = await import('badge-maker');
   const format = {
     label: 'Error',
     message: errorMessage,
@@ -156,17 +157,19 @@ const setCacheHeaders = (res: VercelResponse, svg: string): void => {
 
 export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   // Global error handler
-  process.on('uncaughtException', (error) => {
+  process.on('uncaughtException', async (error) => {
     console.error('[UNCAUGHT EXCEPTION]', error);
     if (!res.headersSent) {
-      res.status(500).send(createErrorBadge('Uncaught Error'));
+      const errorBadge = await createErrorBadge('Uncaught Error');
+      res.status(500).send(errorBadge);
     }
   });
 
-  process.on('unhandledRejection', (reason) => {
+  process.on('unhandledRejection', async (reason) => {
     console.error('[UNHANDLED REJECTION]', reason);
     if (!res.headersSent) {
-      res.status(500).send(createErrorBadge('Unhandled Rejection'));
+      const errorBadge = await createErrorBadge('Unhandled Rejection');
+      res.status(500).send(errorBadge);
     }
   });
 
@@ -187,7 +190,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
         BOT_TOKEN: !!process.env.BOT_TOKEN,
         CHAT_ID: !!process.env.CHAT_ID
       });
-      const errorBadge = createErrorBadge('Missing Config');
+      const errorBadge = await createErrorBadge('Missing Config');
       res.setHeader("Content-Type", "image/svg+xml");
       res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
       res.status(500).send(errorBadge);
@@ -220,7 +223,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       labelColor: Array.isArray(req.query.labelColor) ? req.query.labelColor[0] : req.query.labelColor
     };
     
-    const svg = createBadge(members, badgeOptions);
+    const svg = await createBadge(members, badgeOptions);
     logger.debug('Badge created');
 
     setCacheHeaders(res, svg);
@@ -235,21 +238,21 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     
     if (err instanceof Error) {
       if (err.message.includes("Missing BOT_TOKEN") || err.message.includes("Missing CHAT_ID")) {
-        errorBadge = createErrorBadge('Configuration Error');
+        errorBadge = await createErrorBadge('Configuration Error');
         logger.error(`Configuration error: ${err.message}`);
       } else if (err.message.includes("Telegram API error")) {
-        errorBadge = createErrorBadge('API Error');
+        errorBadge = await createErrorBadge('API Error');
         logger.error(`Telegram API error: ${err.message}`);
       } else if (err.message.includes("Request timeout")) {
-        errorBadge = createErrorBadge('Timeout');
+        errorBadge = await createErrorBadge('Timeout');
         statusCode = 503;
         logger.error(`Timeout error: ${err.message}`);
       } else {
-        errorBadge = createErrorBadge('Server Error');
+        errorBadge = await createErrorBadge('Server Error');
         logger.error(`Server error: ${err.message}`);
       }
     } else {
-      errorBadge = createErrorBadge('Server Error');
+      errorBadge = await createErrorBadge('Server Error');
       logger.error('Unknown error occurred');
     }
     
