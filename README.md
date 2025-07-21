@@ -238,10 +238,10 @@ npm run build
 
 <div align="center">
 
-  <img src="public/btc.png" alt="BTC" style="height: 205px" />
-  <img src="public/ton.png" alt="TON" style="height: 205px" />
-  <img src="public/not.png" alt="NOT" style="height: 205px" />
-  <img src="public/eth.png" alt="ETH" style="height: 205px" />
+  <img src="public/btc.png" alt="BTC" style="height: 185px" />
+  <img src="public/ton.png" alt="TON" style="height: 185px" />
+  <img src="public/not.png" alt="NOT" style="height: 185px" />
+  <img src="public/eth.png" alt="ETH" style="height: 185px" />
 
 </div>
 
