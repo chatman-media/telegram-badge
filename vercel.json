@@ -1,9 +1,7 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/telegram-badge.ts",
-      "use": "@vercel/node"
+  "functions": {
+    "api/telegram-badge.ts": {
+      "runtime": "nodejs18.x"
     }
-  ]
+  }
 }
