@@ -1,16 +1,21 @@
 import { makeBadge } from 'badge-maker';
 import * as crypto from 'crypto';
-import {
-  BadgeOptions,
-  BadgeFormat,
-  TelegramApiResponse,
-  Logger,
-  Request,
-  Response,
-  Environment
-} from '../types';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 
-const logger: Logger = {
+interface BadgeOptions {
+  style?: 'flat' | 'plastic' | 'flat-square' | 'for-the-badge' | 'social';
+  label?: string;
+  color?: string;
+  labelColor?: string;
+}
+
+interface TelegramApiResponse {
+  ok: boolean;
+  result?: number;
+  description?: string;
+}
+
+const logger = {
   info: (message: string, data: Record<string, any> = {}): void => {
     console.log(`[INFO] ${message}`, data);
   },
@@ -27,7 +32,7 @@ const logger: Logger = {
   }
 };
 
-const validateEnvironment = (): Environment => {
+const validateEnvironment = (): { token: string; chatId: string } => {
   const token = process.env.BOT_TOKEN;
   const chatId = process.env.CHAT_ID;
   
@@ -105,7 +110,7 @@ const createBadge = (members: number, options: BadgeOptions): string => {
   const normalizedColor = color.replace(/^#/, '');
   const normalizedLabelColor = labelColor.replace(/^#/, '');
   
-  const format: BadgeFormat = {
+  const format = {
     label,
     message: `${members} members`,
     color: `#${normalizedColor}`,
@@ -113,11 +118,11 @@ const createBadge = (members: number, options: BadgeOptions): string => {
     style
   };
   
-  return makeBadge(format);
+  return makeBadge(format as any);
 };
 
 const createErrorBadge = (errorMessage: string): string => {
-  const format: BadgeFormat = {
+  const format = {
     label: 'Error',
     message: errorMessage,
     color: '#e05d44',
@@ -125,10 +130,10 @@ const createErrorBadge = (errorMessage: string): string => {
     style: 'flat'
   };
   
-  return makeBadge(format);
+  return makeBadge(format as any);
 };
 
-const setCacheHeaders = (res: Response, svg: string): void => {
+const setCacheHeaders = (res: VercelResponse, svg: string): void => {
   res.setHeader("Content-Type", "image/svg+xml");
   
   res.setHeader(
@@ -149,7 +154,7 @@ const setCacheHeaders = (res: Response, svg: string): void => {
   logger.debug('Cache headers set');
 };
 
-export default async function handler(req: Request, res: Response): Promise<void> {
+export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   logger.info('Received badge request', { 
     query: req.query,
     userAgent: req.headers['user-agent'],
@@ -178,9 +183,9 @@ export default async function handler(req: Request, res: Response): Promise<void
     
     const badgeOptions: BadgeOptions = {
       style: req.query.style as BadgeOptions['style'],
-      label: req.query.label,
-      color: req.query.color,
-      labelColor: req.query.labelColor
+      label: Array.isArray(req.query.label) ? req.query.label[0] : req.query.label,
+      color: Array.isArray(req.query.color) ? req.query.color[0] : req.query.color,
+      labelColor: Array.isArray(req.query.labelColor) ? req.query.labelColor[0] : req.query.labelColor
     };
     
     const svg = createBadge(members, badgeOptions);

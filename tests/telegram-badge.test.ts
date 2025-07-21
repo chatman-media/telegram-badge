@@ -1,6 +1,6 @@
 import badgeHandler from '../api/telegram-badge';
 import * as crypto from 'crypto';
-import { Request, Response } from '../types';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 
 // Mock fetch globally
 global.fetch = jest.fn() as jest.MockedFunction<typeof fetch>;
@@ -11,8 +11,8 @@ console.error = jest.fn();
 console.warn = jest.fn();
 
 describe('Telegram Badge API', () => {
-  let req: Request;
-  let res: Response;
+  let req: Partial<VercelRequest>;
+  let res: Partial<VercelResponse>;
   
   beforeEach(() => {
     jest.clearAllMocks();
@@ -32,7 +32,7 @@ describe('Telegram Badge API', () => {
       send: jest.fn(),
       setHeader: jest.fn(),
       end: jest.fn()
-    } as unknown as Response;
+    } as Partial<VercelResponse>;
     
     // Mock successful Telegram API response
     (fetch as jest.MockedFunction<typeof fetch>).mockResolvedValue({
@@ -45,7 +45,7 @@ describe('Telegram Badge API', () => {
   });
   
   test('должен возвращать SVG бейдж с количеством участников', async () => {
-    await badgeHandler(req, res);
+    await badgeHandler(req as VercelRequest, res as VercelResponse);
     
     // Check that fetch was called with correct parameters
     expect(fetch).toHaveBeenCalledWith(
@@ -66,7 +66,7 @@ describe('Telegram Badge API', () => {
     // Remove environment variables
     delete process.env.BOT_TOKEN;
     
-    await badgeHandler(req, res);
+    await badgeHandler(req as VercelRequest, res as VercelResponse);
     
     // Check that error response was sent
     expect(res.status).toHaveBeenCalledWith(500);
@@ -83,7 +83,7 @@ describe('Telegram Badge API', () => {
       })
     } as any);
     
-    await badgeHandler(req, res);
+    await badgeHandler(req as VercelRequest, res as VercelResponse);
     
     // Check that error response was sent
     expect(res.status).toHaveBeenCalledWith(500);
@@ -94,7 +94,7 @@ describe('Telegram Badge API', () => {
     // Mock network error
     (fetch as jest.MockedFunction<typeof fetch>).mockRejectedValue(new Error('Network error'));
     
-    await badgeHandler(req, res);
+    await badgeHandler(req as VercelRequest, res as VercelResponse);
     
     // Check that error response was sent
     expect(res.status).toHaveBeenCalledWith(500);
@@ -110,7 +110,7 @@ describe('Telegram Badge API', () => {
       labelColor: '000000'
     };
     
-    await badgeHandler(req, res);
+    await badgeHandler(req as VercelRequest, res as VercelResponse);
     
     // Check that response was sent with status 200
     expect(res.status).toHaveBeenCalledWith(200);
@@ -120,7 +120,7 @@ describe('Telegram Badge API', () => {
   test('должен возвращать 304 Not Modified при совпадении ETag', async () => {
     // Set If-None-Match header
     const testEtag = '\"test-etag\"';
-    req.headers['if-none-match'] = testEtag;
+    req.headers!['if-none-match'] = testEtag;
     
     // Mock the specific environment to create a predictable ETag
     const originalEnv = process.env;
@@ -145,9 +145,9 @@ describe('Telegram Badge API', () => {
       }))
       .digest('hex');
     
-    req.headers['if-none-match'] = `"${expectedHash}"`;
+    req.headers!['if-none-match'] = `"${expectedHash}"`;
     
-    await badgeHandler(req, res);
+    await badgeHandler(req as VercelRequest, res as VercelResponse);
     
     // Restore environment
     process.env = originalEnv;
@@ -163,7 +163,7 @@ describe('Telegram Badge API', () => {
     abortError.name = 'AbortError';
     (fetch as jest.MockedFunction<typeof fetch>).mockRejectedValue(abortError);
     
-    await badgeHandler(req, res);
+    await badgeHandler(req as VercelRequest, res as VercelResponse);
     
     // Check that error response was sent with service unavailable status
     expect(res.status).toHaveBeenCalledWith(503);
@@ -176,7 +176,7 @@ describe('Telegram Badge API', () => {
       style: 'invalid-style'
     };
     
-    await badgeHandler(req, res);
+    await badgeHandler(req as VercelRequest, res as VercelResponse);
     
     // Should still work with default style
     expect(res.status).toHaveBeenCalledWith(200);

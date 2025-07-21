@@ -38,6 +38,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@types/node": "^24.0.15",
+    "@vercel/node": "^3.2.19",
     "dotenv": "^17.2.0",
     "jest": "^30.0.4",
     "node-fetch": "^2.7.0",
