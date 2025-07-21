@@ -16,11 +16,11 @@ export function generateBadgeSVG(format: BadgeFormat): string {
   const { label, message, color, labelColor, style, logo } = format;
   
   // Calculate logo space
-  const logoSpace = logo ? 25 : 0;
+  const logoSpace = logo ? 18 : 0;
   
   // Better text width calculation
-  const labelWidth = label.length * 6.5 + 20 + logoSpace;
-  const messageWidth = message.length * 6.5 + 20;
+  const labelWidth = label.length * 6.5 + 10 + logoSpace;
+  const messageWidth = message.length * 6.5 + 10;
   const totalWidth = labelWidth + messageWidth;
   
   // Calculate proper text length for label
