@@ -35,7 +35,7 @@ export function generateBadgeSVG(format: BadgeFormat): string {
     const textOffset = logo ? 10 : 0;
     // Adjust textLength based on whether logo is present
     // When logo is present, we have 25px less space for text
-    const labelTextLengthForBadge = logo ? (labelWidth - 25 - 20) * 10 : (labelWidth - 20) * 10;
+    const labelTextLengthForBadge = logo ? (labelWidth - 25) * 10 : (labelWidth) * 10;
     
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth}" height="28" role="img" aria-label="${label}: ${message}">
       <title>${label}: ${message}</title>
