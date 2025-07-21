@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+module.exports = async function (req, res) {
   const token = process.env.BOT_TOKEN;
   const chatId = process.env.CHAT_ID;
 
@@ -36,4 +36,4 @@ export default async function handler(req, res) {
     console.error("Server error:", err);
     return res.status(500).send(`Server error: ${err.message}`);
   }
-}
+};
