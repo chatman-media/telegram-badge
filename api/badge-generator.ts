@@ -31,8 +31,8 @@ export function generateBadgeSVG(format: BadgeFormat): string {
   
   // For-the-badge style
   if (style === 'for-the-badge') {
-    const logoForBadge = logo ? `<image x="10" y="7" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
-    const textOffset = logo ? 12 : 0;
+    const logoForBadge = logo ? `<image x="5" y="7" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
+    const textOffset = logo ? 10 : 0;
     
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth}" height="28" role="img" aria-label="${label}: ${message}">
       <title>${label}: ${message}</title>
@@ -42,8 +42,8 @@ export function generateBadgeSVG(format: BadgeFormat): string {
       </g>
       ${logoForBadge}
       <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
-        <text x="${(labelWidth / 2 + textOffset) * 10}" y="185" transform="scale(.1)" fill="#fff" textLength="${labelTextLength}">${label.toUpperCase()}</text>
-        <text x="${(labelWidth + messageWidth / 2) * 10}" y="185" font-weight="bold" transform="scale(.1)" fill="#fff" textLength="${(messageWidth - 10) * 10}">${message.toUpperCase()}</text>
+        <text x="${(labelWidth / 2 + textOffset) * 10}" y="175" transform="scale(.1)" fill="#fff" textLength="${(labelWidth - 20 - logoSpace) * 10}">${label.toUpperCase()}</text>
+        <text x="${(labelWidth + messageWidth / 2) * 10}" y="175" font-weight="bold" transform="scale(.1)" fill="#fff" textLength="${(messageWidth - 10) * 10}">${message.toUpperCase()}</text>
       </g>
     </svg>`;
   }
