@@ -42,7 +42,7 @@ export function generateBadgeSVG(format: BadgeFormat): string {
       </g>
       ${logoForBadge}
       <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
-        <text x="${(labelWidth / 2 + textOffset) * 10}" y="175" transform="scale(.1)" fill="#fff" textLength="${(labelWidth - 20 - logoSpace) * 10}">${label.toUpperCase()}</text>
+        <text x="${(labelWidth / 2 + textOffset) * 10}" y="175" transform="scale(.1)" fill="#fff" textLength="${(labelWidth - 10) * 10}">${label.toUpperCase()}</text>
         <text x="${(labelWidth + messageWidth / 2) * 10}" y="175" font-weight="bold" transform="scale(.1)" fill="#fff" textLength="${(messageWidth - 10) * 10}">${message.toUpperCase()}</text>
       </g>
     </svg>`;
