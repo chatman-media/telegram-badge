@@ -5,130 +5,188 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Этот проект генерирует SVG-бейдж с текущим количеством участников вашей Telegram-группы. Идеально подходит для отображения активности сообщества в README на GitHub или на сайте.
+This project generates SVG badges with the current member count of your Telegram group. Perfect for displaying community activity in GitHub README files or on websites.
 
-## 🚀 Демо
+## 🚀 Demo
 
 ![Telegram Group Members](https://telegram-badge.vercel.app/api/telegram-badge)
 
 ---
 
-## 📦 Стек
+## 📦 Tech Stack
 
-- Node.js / Bun
+- Node.js / TypeScript
 - Telegram Bot API
 - Vercel (Serverless API)
+- Jest for testing
 
 ---
 
-## 🛠 Установка
+## 🛠 Installation
 
-1. Клонируйте репозиторий:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/chatman-media/telegram-badge.git
 cd telegram-badge
 ```
 
-2. Установите зависимости:
+2. Install dependencies:
 
 ```bash
 npm install
-# или
+# or
 bun install
 ```
 
-3. Создайте .env файл и добавьте:
+3. Create a .env file and add:
 
 ```bash
 BOT_TOKEN=your_telegram_bot_token
 CHAT_ID=@your_group_username_or_chat_id
 ```
 
-Убедитесь, что бот добавлен в группу как админ.
+Make sure the bot is added to the group as an admin.
 
-## 🧪 Локальный запуск
+## 🧪 Local Development
 
 ```bash
 npm run dev
-# или
+# or
 bun dev
 ```
 
-Открой в браузере: http://localhost:3000/api/telegram-badge
+Open in browser: http://localhost:3000/api/telegram-badge
 
-## ☁️ Деплой на Vercel
-1.	Задеплойте репозиторий на vercel.com
-2.	В настройках проекта добавьте переменные окружения:
-	•	BOT_TOKEN
-	•	CHAT_ID
+## ☁️ Deploy to Vercel
 
-## 🧩 Использование в GitHub README
+1. Deploy the repository to vercel.com
+2. Add environment variables in project settings:
+   - BOT_TOKEN
+   - CHAT_ID
 
-Добавьте следующую строку в ваш README.md:
+## 🧩 Usage in GitHub README
+
+Add the following line to your README.md:
 
 ```markdown
 ![Telegram Group Badge](https://telegram-badge.vercel.app/api/telegram-badge)
 ```
 
-### 🎨 Параметры стилизации
+### 🎨 Styling Parameters
 
-Вы можете настроить внешний вид бейджа с помощью следующих параметров:
+You can customize the badge appearance using the following parameters:
 
-| Параметр | Описание | Значение по умолчанию |
-|----------|----------|------------------------|
-| `style` | Стиль бейджа | `flat` |
-| `label` | Текст метки | `Telegram` |
-| `color` | Цвет основной части бейджа | `2AABEE` (цвет Telegram) |
-| `labelColor` | Цвет метки бейджа | `555555` |
+| Parameter | Description | Default Value |
+|-----------|-------------|---------------|
+| `style` | Badge style | `flat` |
+| `label` | Label text | `Telegram` |
+| `color` | Main badge color | `2AABEE` (Telegram color) |
+| `labelColor` | Label color | `555555` |
 
-#### Доступные стили:
+#### Available styles:
 
-- `flat` - плоский стиль (по умолчанию)
-- `plastic` - объемный стиль
-- `flat-square` - плоский квадратный стиль
-- `for-the-badge` - широкий стиль с заглавными буквами
-- `social` - социальный стиль
+- `flat` - flat style (default)
+- `plastic` - plastic style with gradient
+- `flat-square` - flat square style
+- `for-the-badge` - wide style with uppercase letters
+- `social` - social style
 
-#### Примеры:
+#### Examples:
 
-Стандартный бейдж:
+Standard badge:
 ```
 https://telegram-badge.vercel.app/api/telegram-badge
 ```
 
-Бейдж с кастомной меткой:
+Badge with custom label:
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?label=Our%20Group
 ```
 
-Бейдж с кастомным цветом:
+Badge with custom color:
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?color=FF0000
 ```
 
-Бейдж с кастомным стилем:
+Badge with custom style:
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge
 ```
 
-Полностью кастомизированный бейдж:
+Fully customized badge:
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?style=social&label=Join%20Us&color=FF5733&labelColor=333333
 ```
 
-## 🧠 Возможности
+## ✨ Features
 
-- 👥 Отображение количества участников в реальном времени
-- 🎨 Полная кастомизация внешнего вида бейджа
-- 🔒 Поддержка .env и переменных Vercel для безопасного хранения токенов
-- ⚡ Оптимизированное кэширование для быстрой загрузки
-- 🛡️ Обработка ошибок с информативными сообщениями
-- 🆓 Бесплатно на Vercel при обычной нагрузке
-- 📡 Можно расширить до отображения активности / количества сообщений
+- 👥 Real-time member count display
+- 🎨 Full badge appearance customization
+- 🔒 Support for .env and Vercel environment variables for secure token storage
+- ⚡ Optimized caching for fast loading
+- 🛡️ Error handling with informative messages
+- 🆓 Free on Vercel with normal usage
+- 📡 Can be extended to show activity/message count
+- 🧪 Comprehensive test suite with TypeScript
 
-⸻
+## 🔧 API Usage
 
-📜 Лицензия
+### As npm package:
 
-MIT
+```bash
+npm install telegram-badge
+```
+
+```typescript
+import badgeHandler from 'telegram-badge';
+
+// Use in your serverless function
+export default badgeHandler;
+```
+
+### Direct API calls:
+
+```typescript
+GET /api/telegram-badge?style=flat&label=Members&color=2AABEE&labelColor=555555
+```
+
+## 🧪 Testing
+
+Run the test suite:
+
+```bash
+npm test
+```
+
+Run type checking:
+
+```bash
+npm run type-check
+```
+
+Build the project:
+
+```bash
+npm run build
+```
+
+## 📚 Documentation
+
+For detailed documentation in Russian, see [README.ru.md](README.ru.md).
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with ❤️ by [Chatman Media](https://github.com/chatman-media)
