@@ -1,6 +1,5 @@
-import { jest } from '@jest/globals';
-import badgeHandler from '../api/telegram-badge.js';
-import crypto from 'crypto';
+const badgeHandler = require('../api/telegram-badge');
+const crypto = require('crypto');
 
 // Мокаем fetch
 global.fetch = jest.fn();

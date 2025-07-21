@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/telegram-badge.js",
+      "src": "api/telegram-badge.ts",
       "use": "@vercel/node"
     }
   ]

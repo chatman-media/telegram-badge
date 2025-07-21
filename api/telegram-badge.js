@@ -1,5 +1,5 @@
-import { makeBadge } from 'badge-maker';
-import crypto from 'crypto';
+const { makeBadge } = require('badge-maker');
+const crypto = require('crypto');
 
 // Простая функция логирования с уровнями
 const logger = {
@@ -35,7 +35,7 @@ const validateEnvironment = () => {
   return { token, chatId };
 };
 
-export default async function (req, res) {
+module.exports = async function (req, res) {
   // Логируем входящий запрос
   logger.info('Received badge request', { 
     query: req.query,

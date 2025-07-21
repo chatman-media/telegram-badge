@@ -1,8 +1,21 @@
-export default {
-  transform: {},
-  // Удаляем extensionsToTreatAsEsm, так как .js уже определен в package.json
-  moduleNameMapper: {
-    '^(\\.{1,2}/.*)\\.js$': '$1'
+module.exports = {
+  preset: 'ts-jest/presets/default',
+  testEnvironment: 'node',
+  roots: ['<rootDir>/tests'],
+  testMatch: [
+    '**/__tests__/**/*.+(ts|tsx)',
+    '**/*.(test|spec).+(ts|tsx)'
+  ],
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-  testEnvironment: 'node'
+  moduleNameMapper: {
+    '^badge-maker$': '<rootDir>/tests/__mocks__/badge-maker.js'
+  },
+  setupFilesAfterEnv: ['<rootDir>/tests/setup.ts'],
+  coverageDirectory: 'coverage',
+  collectCoverageFrom: [
+    'api/**/*.{ts}',
+    '!api/**/*.d.ts',
+  ],
 };

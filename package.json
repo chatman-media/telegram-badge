@@ -1,19 +1,25 @@
 {
   "name": "telegram-badge",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vercel dev",
     "start": "vercel dev",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "jest",
+    "build": "tsc",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "badge-maker": "^5.0.2"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.12",
     "@types/node": "^24.0.15",
     "dotenv": "^17.2.0",
     "jest": "^30.0.4",
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^2.7.0",
+    "typescript": "^5.5.4",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2"
   }
 }

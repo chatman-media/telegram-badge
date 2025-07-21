@@ -4,9 +4,7 @@
 
 ## 🚀 Демо
 
-![Telegram Group Members](https://your-vercel-app.vercel.app/api/telegram-badge)
-
-> Замените `your-vercel-app` на ваш актуальный Vercel-деплой.
+![Telegram Group Members](https://telegram-badge.vercel.app/api/telegram-badge)
 
 ---
 
@@ -65,10 +63,8 @@ bun dev
 Добавьте следующую строку в ваш README.md:
 
 ```markdown
-![Telegram Group Badge](https://your-vercel-app.vercel.app/api/telegram-badge)
+![Telegram Group Badge](https://telegram-badge.vercel.app/api/telegram-badge)
 ```
-
-Замените `your-vercel-app` на ваш актуальный Vercel-деплой.
 
 ### 🎨 Параметры стилизации
 
@@ -93,27 +89,27 @@ bun dev
 
 Стандартный бейдж:
 ```
-https://your-vercel-app.vercel.app/api/telegram-badge
+https://telegram-badge.vercel.app/api/telegram-badge
 ```
 
 Бейдж с кастомной меткой:
 ```
-https://your-vercel-app.vercel.app/api/telegram-badge?label=Our%20Group
+https://telegram-badge.vercel.app/api/telegram-badge?label=Our%20Group
 ```
 
 Бейдж с кастомным цветом:
 ```
-https://your-vercel-app.vercel.app/api/telegram-badge?color=FF0000
+https://telegram-badge.vercel.app/api/telegram-badge?color=FF0000
 ```
 
 Бейдж с кастомным стилем:
 ```
-https://your-vercel-app.vercel.app/api/telegram-badge?style=for-the-badge
+https://telegram-badge.vercel.app/api/telegram-badge?style=for-the-badge
 ```
 
 Полностью кастомизированный бейдж:
 ```
-https://your-vercel-app.vercel.app/api/telegram-badge?style=social&label=Join%20Us&color=FF5733&labelColor=333333
+https://telegram-badge.vercel.app/api/telegram-badge?style=social&label=Join%20Us&color=FF5733&labelColor=333333
 ```
 
 ## 🧠 Возможности
