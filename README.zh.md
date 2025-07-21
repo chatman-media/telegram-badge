@@ -7,7 +7,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)](https://www.typescriptlang.org/)
 [![许可证: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![dev.to](https://img.shields.io/badge/dev.to-Article-0A0A0A.svg?style=flat&logo=dev.to)](https://dev.to/chatman-media/show-your-telegram-group-member-count-in-github-readme-46pl)
-[![X (Twitter)](https://img.shields.io/badge/X-Post-000000.svg?style=flat&logo=x)](https://x.com/chatman_media/status/1947399700795244694)
+[![X (Twitter)](https://img.shields.io/badge/Tweet-1DA1F2.svg?style=flat&logo=x&logoColor=white)](https://x.com/chatman_media/status/1947399700795244694)
 
 本项目生成显示 Telegram 群组当前成员数量的 SVG 徽章。非常适合在 GitHub README 文件或网站上展示社区活跃度。
 
