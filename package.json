@@ -1,6 +1,6 @@
 {
   "name": "telegram-badge",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Generate Telegram group member count badges for GitHub README",
   "keywords": [
     "telegram",
