@@ -23,8 +23,8 @@
     "LICENSE"
   ],
   "scripts": {
-    "dev": "vercel dev",
-    "start": "vercel dev",
+    "dev": "node -p \"console.log('Use: npx vercel dev')\"",
+    "start": "node -p \"console.log('Use: npx vercel dev')\"",
     "test": "jest",
     "build": "echo 'Build handled by Vercel'",
     "build:local": "tsc",

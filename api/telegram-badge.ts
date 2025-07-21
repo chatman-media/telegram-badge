@@ -155,13 +155,45 @@ const setCacheHeaders = (res: VercelResponse, svg: string): void => {
 };
 
 export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
-  logger.info('Received badge request', { 
-    query: req.query,
-    userAgent: req.headers['user-agent'],
-    referer: req.headers['referer'] || 'unknown'
+  // Global error handler
+  process.on('uncaughtException', (error) => {
+    console.error('[UNCAUGHT EXCEPTION]', error);
+    if (!res.headersSent) {
+      res.status(500).send(createErrorBadge('Uncaught Error'));
+    }
   });
-  
+
+  process.on('unhandledRejection', (reason) => {
+    console.error('[UNHANDLED REJECTION]', reason);
+    if (!res.headersSent) {
+      res.status(500).send(createErrorBadge('Unhandled Rejection'));
+    }
+  });
+
   try {
+    logger.info('Function started', { 
+      query: req.query,
+      userAgent: req.headers['user-agent'],
+      referer: req.headers['referer'] || 'unknown',
+      env: {
+        hasToken: !!process.env.BOT_TOKEN,
+        hasChatId: !!process.env.CHAT_ID
+      }
+    });
+    
+    // Early check for environment variables
+    if (!process.env.BOT_TOKEN || !process.env.CHAT_ID) {
+      logger.error('Missing environment variables', {
+        BOT_TOKEN: !!process.env.BOT_TOKEN,
+        CHAT_ID: !!process.env.CHAT_ID
+      });
+      const errorBadge = createErrorBadge('Missing Config');
+      res.setHeader("Content-Type", "image/svg+xml");
+      res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+      res.status(500).send(errorBadge);
+      return;
+    }
+    
     const { token, chatId } = validateEnvironment();
     logger.debug('Environment validated', { chatId });
 
