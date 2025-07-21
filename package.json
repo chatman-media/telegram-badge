@@ -26,10 +26,11 @@
     "dev": "vercel dev",
     "start": "vercel dev",
     "test": "jest",
-    "build": "tsc",
+    "build": "echo 'Build handled by Vercel'",
+    "build:local": "tsc",
     "type-check": "tsc --noEmit",
-    "prepublishOnly": "npm run build && npm test",
-    "prepack": "npm run build"
+    "prepublishOnly": "npm run build:local && npm test",
+    "prepack": "npm run build:local"
   },
   "dependencies": {
     "badge-maker": "^5.0.2"
