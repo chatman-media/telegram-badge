@@ -3,16 +3,20 @@ export default async function handler(req, res) {
   const chatId = process.env.CHAT_ID;
 
   if (!token || !chatId) {
-    return res.status(500).send("Missing BOT_TOKEN or CHAT_ID");
+    return res
+      .status(500)
+      .send("Missing BOT_TOKEN or CHAT_ID. Check your Vercel Environment Variables.");
   }
 
   try {
-    const tgRes = await fetch(`https://api.telegram.org/bot${token}/getChatMembersCount?chat_id=${chatId}`);
-    const data = await tgRes.json();
+    const apiUrl = `https://api.telegram.org/bot${token}/getChatMembersCount?chat_id=${encodeURIComponent(chatId)}`;
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    console.log("Telegram API Response:", data);
 
     if (!data.ok) {
-      console.error("Telegram error:", data);
-      throw new Error(data.description || "Telegram API error");
+      return res.status(500).send(`Telegram API error: ${data.description}`);
     }
 
     const members = data.result;
@@ -30,6 +34,6 @@ export default async function handler(req, res) {
     return res.status(200).send(svg);
   } catch (err) {
     console.error("Server error:", err);
-    return res.status(500).send(`Error: ${err.message}`);
+    return res.status(500).send(`Server error: ${err.message}`);
   }
 }
