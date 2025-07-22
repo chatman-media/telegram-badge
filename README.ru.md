@@ -3,7 +3,7 @@
 [🇷🇺 Русский](README.ru.md) | [🇺🇸 English](README.md) | [🇨🇳 中文](README.zh.md)
 
 [![Build Status](https://github.com/chatman-media/telegram-badge/workflows/CI/badge.svg)](https://github.com/chatman-media/telegram-badge/actions)
-[![npm version](https://badge.fury.io/js/telegram-badge.svg)](https://badge.fury.io/js/telegram-badge)
+[![npm version](https://img.shields.io/npm/v/telegram-badge.svg)](https://www.npmjs.com/package/telegram-badge)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/telegram-badge)](https://bundlephobia.com/package/telegram-badge)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -246,10 +246,10 @@ npm run build
 
 <div align="center">
 
-  <img src="public/btc.png" alt="BTC" style="height: 185px" />
-  <img src="public/ton.png" alt="TON" style="height: 185px" />
-  <img src="public/not.png" alt="NOT" style="height: 185px" />
-  <img src="public/eth.png" alt="ETH" style="height: 185px" />
+  <img src="public/btc.png" alt="BTC" style="height: 185px; margin: 0 10px;" />
+  <img src="public/ton.png" alt="TON" style="height: 185px; margin: 0 10px;" />
+  <img src="public/not.png" alt="NOT" style="height: 185px; margin: 0 10px;" />
+  <img src="public/eth.png" alt="ETH" style="height: 185px; margin: 0 10px;" />
 
 </div>
 
