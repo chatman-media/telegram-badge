@@ -14,23 +14,22 @@ const TELEGRAM_LOGO = `<svg xmlns="http://www.w3.org/2000/svg" fill="white" view
 
 export function generateBadgeSVG(format: BadgeFormat): string {
   const { label, message, color, labelColor, style, logo } = format;
-  
+
   const logoSpace = logo ? 25 : 0;
-  
+
   // Better text width calculation
   // Always add logoSpace to width calculation
-  const labelWidth = label.length * 6.5 + 10 + logoSpace;
-  const messageWidth = message.length * 6.5 + 10;
+  const labelWidth = label.length * 7 + 10 + logoSpace;
+  const messageWidth = message.length * 7 + 10;
   const totalWidth = labelWidth + messageWidth;
-  
-  
+
   // Create logo element
   const logoElement = logo ? `<image x="5" y="3" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
-  
+
   // For-the-badge style
   if (style === 'for-the-badge') {
     const logoForBadge = logo ? `<image x="5" y="7" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
-    
+
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth}" height="28" role="img" aria-label="${label}: ${message}">
       <title>${label}: ${message}</title>
       <g shape-rendering="crispEdges">
@@ -44,7 +43,7 @@ export function generateBadgeSVG(format: BadgeFormat): string {
       </g>
     </svg>`;
   }
-  
+
   // Flat-square style
   if (style === 'flat-square') {
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth}" height="20" role="img" aria-label="${label}: ${message}">
@@ -60,11 +59,11 @@ export function generateBadgeSVG(format: BadgeFormat): string {
       </g>
     </svg>`;
   }
-  
+
   // Social style
   if (style === 'social') {
     const socialLogoElement = logo ? `<image x="7" y="3" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
-    
+
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth + 4}" height="20" style="border-radius: 3px" role="img" aria-label="${label}: ${message}">
       <title>${label}: ${message}</title>
       <linearGradient id="s" x2="0" y2="100%">
@@ -86,7 +85,7 @@ export function generateBadgeSVG(format: BadgeFormat): string {
       </g>
     </svg>`;
   }
-  
+
   // Plastic style
   if (style === 'plastic') {
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth}" height="20" role="img" aria-label="${label}: ${message}">
@@ -112,7 +111,7 @@ export function generateBadgeSVG(format: BadgeFormat): string {
       </g>
     </svg>`;
   }
-  
+
   // Default flat style
   return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth}" height="20" role="img" aria-label="${label}: ${message}">
     <title>${label}: ${message}</title>

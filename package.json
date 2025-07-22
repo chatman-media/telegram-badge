@@ -30,7 +30,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "dev": "node -p \"console.log('Use: npx vercel dev')\"",
+    "dev": "vercel dev",
     "start": "node -p \"console.log('Use: npx vercel dev')\"",
     "test": "jest",
     "build": "echo 'Build handled by Vercel'",
