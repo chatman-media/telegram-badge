@@ -246,12 +246,10 @@ npm run build
 - **ETH:** 0x286D65151b622dCC16624cEd8463FDa45585fd60
 
 <div align="center">
-
-  <img src="public/btc.png" alt="BTC" style="height: 185px" />
-  <img src="public/ton.png" alt="TON" style="height: 185px" />
-  <img src="public/not.png" alt="NOT" style="height: 185px" />
+  <img src="public/btc.png" alt="BTC" style="height: 185px" /><br/>
+  <img src="public/ton.png" alt="TON" style="height: 185px" /><br/>
+  <img src="public/not.png" alt="NOT" style="height: 185px" /><br/>
   <img src="public/eth.png" alt="ETH" style="height: 185px" />
-
 </div>
 
 ## 📜 License
