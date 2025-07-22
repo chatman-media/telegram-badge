@@ -15,11 +15,11 @@ const TELEGRAM_LOGO = `<svg xmlns="http://www.w3.org/2000/svg" fill="white" view
 export function generateBadgeSVG(format: BadgeFormat): string {
   const { label, message, color, labelColor, style, logo } = format;
 
-  const logoSpace = logo ? 25 : 0;
+  const logoSpace = logo ? 20 : 0;
 
   // Better text width calculation with more spacing
   // Always add logoSpace to width calculation
-  const labelWidth = label.length * 7 + 10 + logoSpace;
+  const labelWidth = label.length * 7 + 5 + logoSpace;
   const messageWidth = message.length * 7 + 10;
   const totalWidth = labelWidth + messageWidth;
 
