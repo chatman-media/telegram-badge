@@ -17,10 +17,10 @@ export function generateBadgeSVG(format: BadgeFormat): string {
 
   const logoSpace = logo ? 25 : 0;
 
-  // Better text width calculation
+  // Better text width calculation with more spacing
   // Always add logoSpace to width calculation
-  const labelWidth = label.length * 6.5 + 10 + logoSpace;
-  const messageWidth = message.length * 6.5 + 10;
+  const labelWidth = label.length * 7 + 10 + logoSpace;
+  const messageWidth = message.length * 7 + 10;
   const totalWidth = labelWidth + messageWidth;
 
   // Create logo element
@@ -38,8 +38,8 @@ export function generateBadgeSVG(format: BadgeFormat): string {
       </g>
       ${logoForBadge}
       <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
-        <text x="${(labelWidth / 2 + (logo ? 7 : 0)) * 10}" y="175" transform="scale(.1)" fill="#fff" textLength="${label.length * 65}" letter-spacing="0.5">${label.toUpperCase()}</text>
-        <text x="${(labelWidth + messageWidth / 2) * 10}" y="175" font-weight="bold" transform="scale(.1)" fill="#fff" textLength="${message.length * 65}" letter-spacing="0.5">${message.toUpperCase()}</text>
+        <text x="${(labelWidth / 2 + (logo ? 7 : 0)) * 10}" y="175" transform="scale(.1)" fill="#fff" letter-spacing="1">${label.toUpperCase()}</text>
+        <text x="${(labelWidth + messageWidth / 2) * 10}" y="175" font-weight="bold" transform="scale(.1)" fill="#fff" letter-spacing="1">${message.toUpperCase()}</text>
       </g>
     </svg>`;
   }
@@ -54,8 +54,8 @@ export function generateBadgeSVG(format: BadgeFormat): string {
       </g>
       ${logoElement}
       <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-        <text x="${(labelWidth / 2 + (logo ? 7 : 0)) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${label.length * 65}" letter-spacing="0.5">${label}</text>
-        <text x="${(labelWidth + messageWidth / 2) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${message.length * 65}" letter-spacing="0.5">${message}</text>
+        <text x="${(labelWidth / 2 + (logo ? 7 : 0)) * 10}" y="140" transform="scale(.1)" fill="#fff" letter-spacing="0.8">${label}</text>
+        <text x="${(labelWidth + messageWidth / 2) * 10}" y="140" transform="scale(.1)" fill="#fff" letter-spacing="0.8">${message}</text>
       </g>
     </svg>`;
   }
@@ -80,8 +80,8 @@ export function generateBadgeSVG(format: BadgeFormat): string {
       </g>
       ${socialLogoElement}
       <g fill="#333" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-weight="700" font-size="110">
-        <text x="${(labelWidth / 2 + 1 + (logo ? 7 : 0)) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${label.length * 65}" letter-spacing="0.3">${label}</text>
-        <text x="${(labelWidth + messageWidth / 2 + 2) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${message.length * 65}" letter-spacing="0.3">${message}</text>
+        <text x="${(labelWidth / 2 + 1 + (logo ? 7 : 0)) * 10}" y="140" transform="scale(.1)" fill="#fff" letter-spacing="0.6">${label}</text>
+        <text x="${(labelWidth + messageWidth / 2 + 2) * 10}" y="140" transform="scale(.1)" fill="#fff" letter-spacing="0.6">${message}</text>
       </g>
     </svg>`;
   }
@@ -106,8 +106,8 @@ export function generateBadgeSVG(format: BadgeFormat): string {
       </g>
       ${logoElement}
       <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-        <text x="${(labelWidth / 2 + (logo ? 7 : 0)) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${label.length * 65}" letter-spacing="0.5">${label}</text>
-        <text x="${(labelWidth + messageWidth / 2) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${message.length * 65}" letter-spacing="0.5">${message}</text>
+        <text x="${(labelWidth / 2 + (logo ? 7 : 0)) * 10}" y="140" transform="scale(.1)" fill="#fff" letter-spacing="0.8">${label}</text>
+        <text x="${(labelWidth + messageWidth / 2) * 10}" y="140" transform="scale(.1)" fill="#fff" letter-spacing="0.8">${message}</text>
       </g>
     </svg>`;
   }
@@ -129,10 +129,10 @@ export function generateBadgeSVG(format: BadgeFormat): string {
     </g>
     ${logoElement}
     <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-      <text aria-hidden="true" x="${(labelWidth / 2 + (logo ? 7 : 0)) * 10}" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="${label.length * 65}" letter-spacing="0.5">${label}</text>
-      <text x="${(labelWidth / 2 + (logo ? 7 : 0)) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${label.length * 65}" letter-spacing="0.5">${label}</text>
-      <text aria-hidden="true" x="${(labelWidth + messageWidth / 2) * 10}" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="${message.length * 65}" letter-spacing="0.5">${message}</text>
-      <text x="${(labelWidth + messageWidth / 2) * 10}" y="140" transform="scale(.1)" fill="#fff" textLength="${message.length * 65}" letter-spacing="0.5">${message}</text>
+      <text aria-hidden="true" x="${(labelWidth / 2 + (logo ? 7 : 0)) * 10}" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" letter-spacing="0.8">${label}</text>
+      <text x="${(labelWidth / 2 + (logo ? 7 : 0)) * 10}" y="140" transform="scale(.1)" fill="#fff" letter-spacing="0.8">${label}</text>
+      <text aria-hidden="true" x="${(labelWidth + messageWidth / 2) * 10}" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" letter-spacing="0.8">${message}</text>
+      <text x="${(labelWidth + messageWidth / 2) * 10}" y="140" transform="scale(.1)" fill="#fff" letter-spacing="0.8">${message}</text>
     </g>
   </svg>`;
 }
