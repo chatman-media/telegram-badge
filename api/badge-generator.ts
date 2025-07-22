@@ -19,7 +19,7 @@ export function generateBadgeSVG(format: BadgeFormat): string {
 
   // Better text width calculation with more spacing
   // Always add logoSpace to width calculation
-  const labelWidth = label.length * 7 + 5 + logoSpace;
+  const labelWidth = label.length * 7 + 10 + logoSpace;
   const messageWidth = message.length * 7 + 10;
   const totalWidth = labelWidth + messageWidth;
 
