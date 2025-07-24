@@ -212,16 +212,6 @@ Build the project:
 npm run build
 ```
 
-## Star History
-
-<a href="https://www.star-history.com/#chatman-media/telegram-badge&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=chatman-media/telegram-badge&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=chatman-media/telegram-badge&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=chatman-media/telegram-badge&type=Date" />
- </picture>
-</a>
-
 ## 🤝 Contributing
 
 1. Fork the repository
