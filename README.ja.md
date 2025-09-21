@@ -198,3 +198,59 @@ GET /api/telegram-badge?style=flat&label=メンバー&color=2AABEE&labelColor=55
 ```bash
 npm test
 ```
+
+## 🤝 貢献
+
+1. リポジトリをフォークする
+2. 機能ブランチを作成する（`git checkout -b feature/amazing-feature`）
+3. 変更をコミットする（`git commit -m 'Add some amazing feature'`）
+4. ブランチにプッシュする（`git push origin feature/amazing-feature`）
+5. Pull Request を作成する
+
+## 購読
+
+[![TikTok](https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white&labelColor=1c1917)](https://www.tiktok.com/@chatman.media)
+[![twitch](https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white&labelColor=1c1917)](https://www.twitch.tv/chatman1984)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=1c1917)](https://www.youtube.com/@chatman-media)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1c1917)](https://t.me/alexanderkireyev)
+[![X](https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white&labelColor=1c1917)](https://x.com/chatman_media)
+
+## サポート 💝🚀
+
+- **BTC:** 14s9Y9Rb2CUWHSAatiQMhfkpx1MWXofUzw
+- **TON:** UQD1M80nPyzph5ZW1vfp_r19XI5MaerNhDq4dWXbXCo96WFj
+- **NOT:** UQD1M80nPyzph5ZW1vfp_r19XI5MaerNhDq4dWXbXCo96WFj
+- **ETH:** 0x286D65151b622dCC16624cEd8463FDa45585fd60
+
+<div align="center">
+  <table>
+    <tr>
+      <td><img src="public/btc.png" alt="BTC" height="185" /></td>
+      <td><img src="public/ton.png" alt="TON" height="185" /></td>
+      <td><img src="public/not.png" alt="NOT" height="185" /></td>
+      <td><img src="public/eth.png" alt="ETH" height="185" /></td>
+    </tr>
+  </table>
+</div>
+
+## スター履歴
+
+<a href="https://www.star-history.com/#chatman-media/telegram-badge&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=chatman-media/telegram-badge&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=chatman-media/telegram-badge&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=chatman-media/telegram-badge&type=Date" />
+ </picture>
+</a>
+
+## リポジトリのアクティビティ
+
+![Alt](https://repobeats.axiom.co/api/embed/74975e0da934ce1756e69f04fe68f2b026a77aee.svg "Repobeats analytics image")
+
+## 📜 ライセンス
+
+このプロジェクトは MIT ライセンスの下で提供されています。詳細は [LICENSE](LICENSE) を参照してください。
+
+---
+
+[Chatman Media](https://github.com/chatman-media) によって ❤️ を込めて作られました

@@ -198,3 +198,71 @@ GET /api/telegram-badge?style=flat&label=สมาชิก&color=2AABEE&labelCo
 ```bash
 npm test
 ```
+
+รันการตรวจสอบประเภท:
+
+```bash
+npm run type-check
+```
+
+สร้างโปรเจ็กต์:
+
+```bash
+npm run build
+```
+
+## 🤝 การมีส่วนร่วม
+
+1. Fork รีพอซิทอรี
+2. สร้าง branch ฟีเจอร์ของคุณ (`git checkout -b feature/amazing-feature`)
+3. Commit การเปลี่ยนแปลงของคุณ (`git commit -m 'Add some amazing feature'`)
+4. Push ไปยัง branch (`git push origin feature/amazing-feature`)
+5. เปิด Pull Request
+
+## ติดตาม
+
+[![TikTok](https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white&labelColor=1c1917)](https://www.tiktok.com/@chatman.media)
+[![twitch](https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white&labelColor=1c1917)](https://www.twitch.tv/chatman1984)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=1c1917)](https://www.youtube.com/@chatman-media)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1c1917)](https://t.me/alexanderkireyev)
+[![X (Twitter)](https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white&labelColor=1c1917)](https://x.com/chatman_media)
+
+## สนับสนุน 💝🚀
+
+- **BTC:** 14s9Y9Rb2CUWHSAatiQMhfkpx1MWXofUzw
+- **TON:** UQD1M80nPyzph5ZW1vfp_r19XI5MaerNhDq4dWXbXCo96WFj
+- **NOT:** UQD1M80nPyzph5ZW1vfp_r19XI5MaerNhDq4dWXbXCo96WFj
+- **ETH:** 0x286D65151b622dCC16624cEd8463FDa45585fd60
+
+<div align="center">
+  <table>
+    <tr>
+      <td><img src="public/btc.png" alt="BTC" height="185" /></td>
+      <td><img src="public/ton.png" alt="TON" height="185" /></td>
+      <td><img src="public/not.png" alt="NOT" height="185" /></td>
+      <td><img src="public/eth.png" alt="ETH" height="185" /></td>
+    </tr>
+  </table>
+</div>
+
+## ประวัติดาว
+
+<a href="https://www.star-history.com/#chatman-media/telegram-badge&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=chatman-media/telegram-badge&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=chatman-media/telegram-badge&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=chatman-media/telegram-badge&type=Date" />
+ </picture>
+</a>
+
+## กิจกรรมรีพอซิทอรี
+
+![Alt](https://repobeats.axiom.co/api/embed/74975e0da934ce1756e69f04fe68f2b026a77aee.svg "Repobeats analytics image")
+
+## 📜 ใบอนุญาต
+
+โปรเจ็กต์นี้ได้รับอนุญาตภายใต้ใบอนุญาต MIT - ดูไฟล์ [LICENSE](LICENSE) สำหรับรายละเอียด
+
+---
+
+สร้างด้วย ❤️ โดย [Chatman Media](https://github.com/chatman-media)

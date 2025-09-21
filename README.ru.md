@@ -255,6 +255,10 @@ npm run build
   </table>
 </div>
 
+## Активность репозитория
+
+![Alt](https://repobeats.axiom.co/api/embed/74975e0da934ce1756e69f04fe68f2b026a77aee.svg "Repobeats analytics image")
+
 ## 📜 Лицензия
 
 Этот проект лицензирован под лицензией MIT - подробности в файле [LICENSE](LICENSE).

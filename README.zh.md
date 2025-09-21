@@ -256,6 +256,10 @@ npm run build
   </table>
 </div>
 
+## 仓库活动
+
+![Alt](https://repobeats.axiom.co/api/embed/74975e0da934ce1756e69f04fe68f2b026a77aee.svg "Repobeats analytics image")
+
 ## 📜 许可证
 
 本项目根据 MIT 许可证获得许可 - 有关详细信息，请参阅 [LICENSE](LICENSE) 文件。
