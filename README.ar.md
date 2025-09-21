@@ -14,14 +14,14 @@
 [![dev.to](https://img.shields.io/badge/dev.to-Article-0A0A0A.svg?style=flat&logo=dev.to)](https://dev.to/chatman-media/show-your-telegram-group-member-count-in-github-readme-46pl)
 [![X (Twitter)](https://img.shields.io/badge/Tweet-1DA1F2.svg?style=flat&logo=x&logoColor=white)](https://x.com/chatman_media/status/1947399700795244694)
 
-هذا المشروع ي generates شارات SVG بعدد أعضاء مجموعة التيليجرام الحالي الخاص بك. مثالي لعرض نشاط المجتمع في ملفات README على GitHub أو على المواقع.
+هذا المشروع ينشئ شارات SVG بعدد أعضاء مجموعات وقنوات التيليجرام الحالي الخاص بك. مثالي لعرض نشاط المجتمع في ملفات README على GitHub أو على المواقع.
 
 ## 🚀 البدء السريع
 
-فقط استخدم معلمات URL لإنشاء شارات لأي قناة أو مجموعة تيليجرام:
+فقط استخدم معلمات URL لإنشاء شارات لأي مجموعة أو قناة تيليجرام:
 
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_group
 ```
 
 ![Telegram Group Members](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat)
@@ -41,13 +41,18 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
 
 ### الطريقة الأساسية: معلمات URL (لا يتطلب إعداد!)
 
-فقط أضف معرف قناة/مجموعة التيليجرام الخاص بك إلى URL:
+فقط أضف معرف مجموعة/قناة التيليجرام الخاص بك إلى URL:
 
 ```markdown
-![Telegram Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel)
+![Telegram Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_group)
 ```
 
-هذا كل شيء! لا حاجة للنشر، لا حاجة لرمز البوت.
+**الكيانات المدعومة:**
+- القنوات العامة (مثال: `@your_channel`)
+- المجموعات العامة (مثال: `@your_group`)
+- المجموعات/القنوات الخاصة (استخدم المعرف الرقمي مثل `-1001234567890`)
+
+هذا كل شيء! لا حاجة للنشر، لا حاجة لرمز البوت للقنوات والمجموعات العامة.
 
 ### الطريقة البديلة: الاستضافة الذاتية
 

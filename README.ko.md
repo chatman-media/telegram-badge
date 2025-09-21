@@ -14,14 +14,14 @@
 [![dev.to](https://img.shields.io/badge/dev.to-Article-0A0A0A.svg?style=flat&logo=dev.to)](https://dev.to/chatman-media/show-your-telegram-group-member-count-in-github-readme-46pl)
 [![X (Twitter)](https://img.shields.io/badge/Tweet-1DA1F2.svg?style=flat&logo=x&logoColor=white)](https://x.com/chatman_media/status/1947399700795244694)
 
-이 프로젝트는 Telegram 그룹의 현재 멤버 수를 표시하는 SVG 배지를 생성합니다. GitHub README 파일이나 웹사이트에서 커뮤니티 활동을 표시하는 데 완벽합니다.
+이 프로젝트는 Telegram 그룹과 채널의 현재 멤버 수를 표시하는 SVG 배지를 생성합니다. GitHub README 파일이나 웹사이트에서 커뮤니티 활동을 표시하는 데 완벽합니다.
 
 ## 🚀 빠른 시작
 
-URL 매개변수를 사용하여 모든 Telegram 채널이나 그룹에 대한 배지를 생성하기만 하면 됩니다:
+URL 매개변수를 사용하여 모든 Telegram 그룹이나 채널에 대한 배지를 생성하기만 하면 됩니다:
 
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_group
 ```
 
 ![Telegram Group Members](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat)
@@ -41,13 +41,18 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
 
 ### 주요 방법: URL 매개변수 (설정 불필요!)
 
-Telegram 채널/그룹 ID를 URL에 추가하기만 하면 됩니다:
+Telegram 그룹 또는 채널 ID를 URL에 추가하기만 하면 됩니다:
 
 ```markdown
-![Telegram Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel)
+![Telegram Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_group)
 ```
 
-그게 다입니다! 배포도, 봇 토큰도 필요 없습니다.
+**지원되는 엔티티:**
+- 공개 채널 (예: `@your_channel`)
+- 공개 그룹 (예: `@your_group`)
+- 비공개 그룹/채널 (숫자 ID 사용: `-1001234567890`)
+
+그게 다입니다! 배포도, 공개 채널과 그룹에는 봇 토큰도 필요 없습니다.
 
 ### 대체 방법: 자체 호스팅
 

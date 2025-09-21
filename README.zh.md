@@ -14,14 +14,14 @@
 [![dev.to](https://img.shields.io/badge/dev.to-Article-0A0A0A.svg?style=flat&logo=dev.to)](https://dev.to/chatman-media/show-your-telegram-group-member-count-in-github-readme-46pl)
 [![X (Twitter)](https://img.shields.io/badge/Tweet-1DA1F2.svg?style=flat&logo=x&logoColor=white)](https://x.com/chatman_media/status/1947399700795244694)
 
-本项目生成显示 Telegram 群组当前成员数量的 SVG 徽章。非常适合在 GitHub README 文件或网站上展示社区活跃度。
+本项目生成显示 Telegram 群组和频道当前成员数量的 SVG 徽章。非常适合在 GitHub README 文件或网站上展示社区活跃度。
 
 ## 🚀 快速开始
 
-只需使用 URL 参数即可为任何 Telegram 频道或群组生成徽章：
+只需使用 URL 参数即可为任何 Telegram 群组或频道生成徽章：
 
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_group
 ```
 
 ![Telegram 群组成员](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat)
@@ -41,13 +41,18 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
 
 ### 主要方法：URL 参数（无需任何设置！）
 
-只需将您的 Telegram 频道/群组 ID 添加到 URL：
+只需将您的 Telegram 群组或频道 ID 添加到 URL：
 
 ```markdown
-![Telegram Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel)
+![Telegram Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_group)
 ```
 
-就这样！无需部署，无需机器人令牌。
+**支持的实体：**
+- 公开频道（例如：`@your_channel`）
+- 公开群组（例如：`@your_group`）
+- 私有群组/频道（使用数字 ID：`-1001234567890`）
+
+就这样！无需部署，公开频道和群组无需机器人令牌。
 
 ### 替代方法：自托管部署
 

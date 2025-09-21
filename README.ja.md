@@ -14,14 +14,14 @@
 [![dev.to](https://img.shields.io/badge/dev.to-Article-0A0A0A.svg?style=flat&logo=dev.to)](https://dev.to/chatman-media/show-your-telegram-group-member-count-in-github-readme-46pl)
 [![X (Twitter)](https://img.shields.io/badge/Tweet-1DA1F2.svg?style=flat&logo=x&logoColor=white)](https://x.com/chatman_media/status/1947399700795244694)
 
-このプロジェクトは、Telegramグループの現在のメンバー数を表示するSVGバッジを生成します。GitHubのREADMEファイルやウェブサイトでコミュニティの活動を表示するのに最適です。
+このプロジェクトは、Telegramグループとチャンネルの現在のメンバー数を表示するSVGバッジを生成します。GitHubのREADMEファイルやウェブサイトでコミュニティの活動を表示するのに最適です。
 
 ## 🚀 クイックスタート
 
-URLパラメータを使用して、任意のTelegramチャンネルまたはグループのバッジを生成するだけです：
+URLパラメータを使用して、任意のTelegramグループまたはチャンネルのバッジを生成するだけです：
 
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_group
 ```
 
 ![Telegram Group Members](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat)
@@ -41,13 +41,18 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
 
 ### プライマリ方法：URLパラメータ（セットアップ不要！）
 
-Telegramチャンネル/グループIDをURLに追加するだけです：
+TelegramグループまたはチャンネルIDをURLに追加するだけです：
 
 ```markdown
-![Telegram Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel)
+![Telegram Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_group)
 ```
 
-それだけ！デプロイも、ボットトークンの設定も不要です。
+**サポートされているエンティティ：**
+- パブリックチャンネル（例：`@your_channel`）
+- パブリックグループ（例：`@your_group`）
+- プライベートグループ/チャンネル（数値IDを使用：`-1001234567890`）
+
+それだけ！デプロイも、パブリックチャンネルやグループにはボットトークンの設定も不要です。
 
 ### 代替方法：セルフホストデプロイメント
 
