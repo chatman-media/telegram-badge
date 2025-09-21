@@ -59,3 +59,15 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: deno publish --allow-slow-types
+    
+    - name: Setup Deno for JSR
+      if: github.ref == 'refs/heads/main'
+      uses: denoland/setup-deno@v1
+      with:
+        deno-version: v1.x
+    
+    - name: Publish to JSR
+      if: github.ref == 'refs/heads/main'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: deno publish --allow-slow-types
