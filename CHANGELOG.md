@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/chatman-media/telegram-badge/compare/v1.4.0...v1.4.1) (2025-09-21)
+
+
+### Performance Improvements
+
+* **badge-generator:** replace Buffer.from with btoa for base64 encoding ([97a6161](https://github.com/chatman-media/telegram-badge/commit/97a61612ee52fa0f7ebe702f0b1553f56c82c128))
+
 # [1.4.0](https://github.com/chatman-media/telegram-badge/compare/v1.3.1...v1.4.0) (2025-09-21)
 
 
