@@ -84,7 +84,7 @@ You can customize the badge appearance using the following parameters:
 
 | Parameter | Description | Default Value |
 |-----------|-------------|---------------|
-| `channelId` | Telegram chat ID or username (e.g., ``) | From environment |
+| `channelId` | Telegram chat ID or username (e.g., `@your_channel`) | From environment |
 | `style` | Badge style | `flat` |
 | `label` | Label text | `Telegram` |
 | `color` | Main badge color | `2AABEE` (Telegram color) |
@@ -189,7 +189,7 @@ export default badgeHandler;
 ### Direct API calls:
 
 ```typescript
-GET /api/telegram-badge?style=flat&label=Members&color=2AABEE&labelColor=555555
+GET /api/telegram-badge?channelId=@your_channel&style=flat&label=Members&color=2AABEE&labelColor=555555
 ```
 
 ## 🧪 Testing
