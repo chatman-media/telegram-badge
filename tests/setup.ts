@@ -3,3 +3,6 @@ afterEach(() => {
   jest.clearAllTimers();
   jest.restoreAllMocks();
 });
+
+// Export empty object to ensure .d.ts file is not empty
+export {};

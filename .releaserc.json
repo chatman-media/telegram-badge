@@ -32,8 +32,28 @@
       {
         "assets": [
           {
-            "path": "dist/**",
-            "label": "Distribution files"
+            "path": "dist/api/*.js",
+            "label": "API files"
+          },
+          {
+            "path": "dist/api/*.d.ts",
+            "label": "API type definitions"
+          },
+          {
+            "path": "dist/types/*.js",
+            "label": "Type files"
+          },
+          {
+            "path": "dist/types/*.d.ts",
+            "label": "Type definitions"
+          },
+          {
+            "path": "dist/tests/*.test.js",
+            "label": "Test files"
+          },
+          {
+            "path": "dist/tests/*.test.d.ts",
+            "label": "Test type definitions"
           }
         ]
       }
