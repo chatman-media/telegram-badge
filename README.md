@@ -5,7 +5,8 @@
 [![Build Status](https://github.com/chatman-media/telegram-badge/workflows/CI/badge.svg)](https://github.com/chatman-media/telegram-badge/actions)
 [![Release](https://github.com/chatman-media/telegram-badge/workflows/Release/badge.svg)](https://github.com/chatman-media/telegram-badge/actions)
 [![npm version](https://img.shields.io/npm/v/telegram-badge.svg)](https://www.npmjs.com/package/telegram-badge)
-[![JSR](https://jsr.io/badges/@chatman-media/telegram-badge)](https://jsr.io/@chatman-media/telegram-badge)
+[![JSR](https://jsr.io/badges/@aleksandrkireev/telegram-badge)](https://jsr.io/@aleksandrkireev/telegram-badge)
+[![Deno Compatible](https://img.shields.io/badge/Deno-Compatible-00ADD8?logo=deno&logoColor=white)](https://deno.land/)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/telegram-badge)](https://bundlephobia.com/package/telegram-badge)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -188,6 +189,23 @@ import badgeHandler from 'telegram-badge';
 export default badgeHandler;
 ```
 
+### As Deno/JSR package:
+
+```bash
+# Using JSR
+deno add @aleksandrkireev/telegram-badge
+
+# Or import directly
+import badgeHandler from "jsr:@aleksandrkireev/telegram-badge";
+```
+
+```typescript
+import badgeHandler from "@aleksandrkireev/telegram-badge";
+
+// Use in your Deno serverless function
+export default badgeHandler;
+```
+
 ### Direct API calls:
 
 ```typescript
@@ -223,8 +241,6 @@ npm run build
 5. Open a Pull Request
 
 ## Subscribe
-
-### 🌐 Follow on Social Media
 
 [![Stack Overflow profile](https://stackoverflow-readme-profile.johannchopin.fr/profile/724036?theme=dark)](https://stackoverflow.com/users/724036/alexander-kireyev)
 
