@@ -37,15 +37,20 @@
     "build:local": "tsc",
     "type-check": "tsc --noEmit",
     "prepublishOnly": "npm run build:local && npm test",
-    "prepack": "npm run build:local"
+    "prepack": "npm run build:local",
+    "release": "semantic-release"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.6",
     "@types/jest": "30.0.0",
     "@types/node": "^24.5.2",
     "@vercel/node": "5.3.23",
     "dotenv": "^17.2.2",
     "jest": "^30.1.3",
     "node-fetch": "3.3.2",
+    "semantic-release": "^24.2.9",
     "ts-jest": "^29.4.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
