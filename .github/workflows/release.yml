@@ -45,3 +45,13 @@ jobs:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: npx semantic-release
+    
+    - name: Setup Deno for JSR
+      if: github.ref == 'refs/heads/main'
+      uses: denoland/setup-deno@v1
+      with:
+        deno-version: v1.x
+    
+    - name: Publish to JSR
+      if: github.ref == 'refs/heads/main'
+      run: deno publish --allow-slow-types
