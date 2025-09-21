@@ -1,6 +1,6 @@
 # Generador de Insignias de Telegram
 
-**Idiomas:** [🇺🇸 English](README.md) | [🇷🇺 Русский](README.ru.md) | [🇩🇪 Deutsch](README.de.md) | [🇫🇷 Français](README.fr.md) | [🇪🇸 Español](README.es.md) | [🇵🇹 Português](README.pt.md) | [🇸🇦 العربية](README.ar.md) | [🇯🇵 日本語](README.ja.md) | [🇰🇷 한국어](README.ko.md) | [🇹🇭 ไทย](README.th.md) | [🇨🇳 中文](README.zh.md)
+**Idiomas:** [🇺🇸 English](README.md) | [🇷🇺 Русский](README.ru.md) | [🇩🇪 Deutsch](README.de.md) | [🇫🇷 Français](README.fr.md) | [🇵🇹 Português](README.pt.md) | [🇸🇦 العربية](README.ar.md) | [🇯🇵 日本語](README.ja.md) | [🇰🇷 한국어](README.ko.md) | [🇹🇭 ไทย](README.th.md) | [🇨🇳 中文](README.zh.md)
 
 [![Build Status](https://github.com/chatman-media/telegram-badge/actions/workflows/ci.yml/badge.svg)](https://github.com/chatman-media/telegram-badge/actions/workflows/ci.yml)
 [![npm version](https://badge.fury.io/js/@chatman-media%2Ftelegram-badge.svg)](https://badge.fury.io/js/@chatman-media%2Ftelegram-badge)
