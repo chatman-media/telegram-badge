@@ -10,6 +10,7 @@ permissions:
   issues: write
   pull-requests: write
   id-token: write
+  attestations: write
 
 jobs:
   release:
@@ -55,4 +56,6 @@ jobs:
     
     - name: Publish to JSR
       if: github.ref == 'refs/heads/main'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: deno publish --allow-slow-types
