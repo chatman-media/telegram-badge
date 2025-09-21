@@ -26,6 +26,12 @@ jobs:
     - name: Install dependencies
       run: npm ci
     
+    - name: Run Biome lint
+      run: npm run lint
+    
+    - name: Run Biome format check
+      run: npm run format
+    
     - name: Run type check
       run: npm run type-check
     

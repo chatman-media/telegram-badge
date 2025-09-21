@@ -5,15 +5,15 @@
 
 import { generateBadgeSVG } from './api/badge-generator.ts';
 
-export { generateBadgeSVG, type BadgeFormat } from './api/badge-generator.ts';
+export { type BadgeFormat, generateBadgeSVG } from './api/badge-generator.ts';
 
 // Re-export types
 export type {
   BadgeOptions,
-  TelegramApiResponse,
+  Environment,
   Logger,
   RequestQuery,
-  Environment
+  TelegramApiResponse,
 } from './types/index.ts';
 
 /**
@@ -37,7 +37,7 @@ export function createTelegramBadge(
     label = 'Telegram',
     color = '#0088cc',
     labelColor = '#555',
-    logo = true
+    logo = true,
   } = options;
 
   return generateBadgeSVG({
@@ -46,7 +46,7 @@ export function createTelegramBadge(
     color,
     labelColor,
     style,
-    logo: logo
+    logo: logo,
   });
 }
 
@@ -59,13 +59,13 @@ export function validateChannelId(channelId: string): string {
   if (!channelId) {
     throw new Error('Channel ID is required');
   }
-  
+
   // Remove @ if present and validate format
   const normalized = channelId.startsWith('@') ? channelId.slice(1) : channelId;
-  
+
   if (!/^[a-zA-Z0-9_]{5,32}$/.test(normalized)) {
     throw new Error('Invalid channel ID format');
   }
-  
+
   return `@${normalized}`;
 }

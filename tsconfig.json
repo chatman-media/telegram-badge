@@ -19,14 +19,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": [
-    "api/**/*",
-    "tests/**/*",
-    "types/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "vercel.json"
-  ]
+  "include": ["api/**/*", "tests/**/*", "types/**/*"],
+  "exclude": ["node_modules", "dist", "vercel.json"]
 }

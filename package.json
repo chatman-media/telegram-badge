@@ -36,11 +36,18 @@
     "build": "echo 'Build handled by Vercel'",
     "build:local": "tsc",
     "type-check": "tsc --noEmit",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format .",
+    "format:fix": "biome format --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
     "prepublishOnly": "npm run build:local && npm test",
     "prepack": "npm run build:local",
     "release": "semantic-release"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "7.1.0",
     "@semantic-release/git": "^10.0.1",

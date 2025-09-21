@@ -1,4 +1,4 @@
-import * as crypto from 'crypto';
+import * as crypto from 'node:crypto';
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import { generateBadgeSVG } from './badge-generator';
 
@@ -69,8 +69,6 @@ const getMemberCount = async (token: string, channelId: string): Promise<number>
       }
     });
 
-    clearTimeout(timeoutId);
-
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status} ${response.statusText}`);
     }
@@ -90,6 +88,8 @@ const getMemberCount = async (token: string, channelId: string): Promise<number>
     }
     logger.error('Error fetching member count', error);
     throw error;
+  } finally {
+    clearTimeout(timeoutId);
   }
 };
 
