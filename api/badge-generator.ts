@@ -24,11 +24,11 @@ export function generateBadgeSVG(format: BadgeFormat): string {
   const totalWidth = labelWidth + messageWidth;
 
   // Create logo element
-  const logoElement = logo ? `<image x="5" y="3" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
+  const logoElement = logo ? `<image x="5" y="3" width="14" height="14" href="data:image/svg+xml;base64,${btoa(TELEGRAM_LOGO)}"/>` : '';
 
   // For-the-badge style
   if (style === 'for-the-badge') {
-    const logoForBadge = logo ? `<image x="5" y="7" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
+    const logoForBadge = logo ? `<image x="5" y="7" width="14" height="14" href="data:image/svg+xml;base64,${btoa(TELEGRAM_LOGO)}"/>` : '';
 
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth}" height="28" role="img" aria-label="${label}: ${message}">
       <title>${label}: ${message}</title>
@@ -62,7 +62,7 @@ export function generateBadgeSVG(format: BadgeFormat): string {
 
   // Social style
   if (style === 'social') {
-    const socialLogoElement = logo ? `<image x="7" y="3" width="14" height="14" href="data:image/svg+xml;base64,${Buffer.from(TELEGRAM_LOGO).toString('base64')}"/>` : '';
+    const socialLogoElement = logo ? `<image x="7" y="3" width="14" height="14" href="data:image/svg+xml;base64,${btoa(TELEGRAM_LOGO)}"/>` : '';
 
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth + 4}" height="20" style="border-radius: 3px" role="img" aria-label="${label}: ${message}">
       <title>${label}: ${message}</title>
