@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/chatman-media/telegram-badge/compare/v1.4.1...v1.5.0) (2025-09-21)
+
+
+### Features
+
+* add biome for linting and formatting ([f3c80c8](https://github.com/chatman-media/telegram-badge/commit/f3c80c8a9cd83d48e7b1c5684f98f9dc9a7b5c45))
+
 ## [1.4.1](https://github.com/chatman-media/telegram-badge/compare/v1.4.0...v1.4.1) (2025-09-21)
 
 
