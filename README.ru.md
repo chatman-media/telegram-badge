@@ -1,4 +1,4 @@
-# 🛡️ Telegram Group Badge Generator
+# Telegram Group Badge Generator
 
 [🇷🇺 Русский](README.ru.md) | [🇺🇸 English](README.md) | [🇨🇳 中文](README.zh.md) | [🇹🇭 ไทย](README.th.md) | [🇸🇦 العربية](README.ar.md) | [🇯🇵 日本語](README.ja.md) | [🇰🇷 한국어](README.ko.md)
 
