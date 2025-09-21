@@ -1,6 +1,6 @@
-# Telegram Group Badge Generator
+# Telegram Badge Generator
 
-[🇷🇺 Русский](README.ru.md) | [🇺🇸 English](README.md) | [🇨🇳 中文](README.zh.md) | [🇹🇭 ไทย](README.th.md) | [🇸🇦 العربية](README.ar.md) | [🇯🇵 日本語](README.ja.md) | [🇰🇷 한국어](README.ko.md)
+[🇺🇸 English](README.md) | [🇷🇺 Русский](README.ru.md) | [🇩🇪 Deutsch](README.de.md) | [🇫🇷 Français](README.fr.md) | [🇪🇸 Español](README.es.md) | [🇵🇹 Português](README.pt.md) | [🇸🇦 العربية](README.ar.md) | [🇯🇵 日本語](README.ja.md) | [🇰🇷 한국어](README.ko.md) | [🇹🇭 ไทย](README.th.md) | [🇨🇳 中文](README.zh.md)
 
 [![Build Status](https://github.com/chatman-media/telegram-badge/workflows/CI/badge.svg)](https://github.com/chatman-media/telegram-badge/actions)
 [![Release](https://github.com/chatman-media/telegram-badge/workflows/Release/badge.svg)](https://github.com/chatman-media/telegram-badge/actions)
@@ -8,23 +8,30 @@
 [![JSR](https://jsr.io/badges/@chatman-media/telegram-badge)](https://jsr.io/@chatman-media/telegram-badge)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/telegram-badge)](https://bundlephobia.com/package/telegram-badge)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)](https://www.typescriptlang.org/)
+[![Biome](https://img.shields.io/badge/Biome-60A5FA?style=flat&logo=biome&logoColor=white)](https://biomejs.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [![GitHub stars](https://img.shields.io/github/stars/chatman-media/telegram-badge?style=social)](https://github.com/chatman-media/telegram-badge)
 [![dev.to](https://img.shields.io/badge/dev.to-Article-0A0A0A.svg?style=flat&logo=dev.to)](https://dev.to/chatman-media/show-your-telegram-group-member-count-in-github-readme-46pl)
 [![X (Twitter)](https://img.shields.io/badge/Tweet-1DA1F2.svg?style=flat&logo=x&logoColor=white)](https://x.com/chatman_media/status/1947399700795244694)
 
-This project generates SVG badges with the current member count of your Telegram group. Perfect for displaying community activity in GitHub README files or on websites.
+This project generates SVG badges with the current member count of your Telegram groups and channels. Perfect for displaying community activity in GitHub README files or on websites.
+
+**Supports both:**
+- 👥 **Telegram Groups** - Interactive communities where all members can send messages
+- 📢 **Telegram Channels** - Broadcast channels where only admins can post messages
+
+Both groups and channels use the same API endpoint and work identically with this badge generator.
 
 ## 🚀 Quick Start
 
-Just use URL parameters to generate badges for any Telegram channel or group:
+Just use URL parameters to generate badges for any Telegram group or channel:
 
 ```
-https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
+https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_group
 ```
 
-![Telegram Group Members](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat)
+![Telegram Members](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat)
 
 ---
 
@@ -34,6 +41,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
 - Telegram Bot API
 - Vercel (Serverless API)
 - Jest for testing
+- Biome for linting and formatting
 
 ---
 
@@ -41,13 +49,18 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
 
 ### Primary Method: URL Parameters (No Setup Required!)
 
-Simply add your Telegram channel/group ID to the URL:
+Simply add your Telegram group or channel ID to the URL:
 
 ```markdown
-![Telegram Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel)
+![Telegram Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_group)
 ```
 
-That's it! No deployment, no bot token needed.
+**Works with:**
+- Public channels: `@your_channel`
+- Public groups: `@your_group` 
+- Private groups/channels: `-1001234567890` (numeric chat ID)
+
+That's it! No deployment, no bot token needed for public groups and channels.
 
 ### Alternative Method: Self-Hosted Deployment
 
@@ -230,6 +243,42 @@ Build the project:
 ```bash
 npm run build
 ```
+
+## ❓ FAQ
+
+### What's the difference between Telegram Groups and Channels?
+
+**Telegram Groups:**
+- 👥 Interactive communities where all members can send messages
+- Members can see each other and interact
+- Can have up to 200,000 members
+- Example: `@your_group`
+
+**Telegram Channels:**
+- 📢 Broadcast channels where only admins can post messages
+- Subscribers cannot see each other
+- Can have unlimited subscribers
+- Example: `@your_channel`
+
+**For this badge generator:** Both groups and channels work exactly the same way! The Telegram Bot API treats them identically for getting member/subscriber counts.
+
+### How do I find my Group/Channel ID?
+
+**For public groups/channels:**
+- Use the username: `@your_channel` or `@your_group`
+
+**For private groups/channels:**
+- Use a bot like [@userinfobot](https://t.me/userinfobot)
+- Forward any message from your group/channel to the bot
+- It will show the chat ID (like `-1001234567890`)
+
+### Do I need a bot token?
+
+**No bot token needed** for public groups and channels when using the hosted service at `telegram-badge.vercel.app`.
+
+**Bot token required** only for:
+- Private groups/channels
+- Self-hosted deployments
 
 ## 🤝 Contributing
 
