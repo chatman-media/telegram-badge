@@ -1,5 +1,5 @@
 {
-  "name": "@aleksandrkireev/telegram-badge",
+  "name": "@chatman-media/telegram-badge",
   "version": "1.4.1",
   "license": "MIT",
   "exports": "./mod.ts"
