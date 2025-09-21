@@ -2,11 +2,16 @@
 
 **Langues :** [🇺🇸 English](README.md) | [🇷🇺 Русский](README.ru.md) | [🇩🇪 Deutsch](README.de.md) | [🇪🇸 Español](README.es.md) | [🇵🇹 Português](README.pt.md) | [🇸🇦 العربية](README.ar.md) | [🇯🇵 日本語](README.ja.md) | [🇰🇷 한국어](README.ko.md) | [🇹🇭 ไทย](README.th.md) | [🇨🇳 中文](README.zh.md)
 
-[![Build Status](https://github.com/chatman-media/telegram-badge/actions/workflows/ci.yml/badge.svg)](https://github.com/chatman-media/telegram-badge/actions/workflows/ci.yml)
-[![npm version](https://badge.fury.io/js/@chatman-media%2Ftelegram-badge.svg)](https://badge.fury.io/js/@chatman-media%2Ftelegram-badge)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-<a href="https://biomejs.dev"><img src="https://img.shields.io/badge/Biome-60A5FA?style=flat&logo=biome&logoColor=white" alt="Biome"></a>
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![Build Status](https://github.com/chatman-media/telegram-badge/workflows/CI/badge.svg)](https://github.com/chatman-media/telegram-badge/actions)
+[![Release](https://github.com/chatman-media/telegram-badge/workflows/Release/badge.svg)](https://github.com/chatman-media/telegram-badge/actions)
+[![npm version](https://img.shields.io/npm/v/telegram-badge.svg)](https://www.npmjs.com/package/telegram-badge)
+[![JSR](https://jsr.io/badges/@chatman-media/telegram-badge)](https://jsr.io/@chatman-media/telegram-badge)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/telegram-badge)](https://bundlephobia.com/package/telegram-badge)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[![GitHub stars](https://img.shields.io/github/stars/chatman-media/telegram-badge?style=social)](https://github.com/chatman-media/telegram-badge)
+[![dev.to](https://img.shields.io/badge/dev.to-Article-0A0A0A.svg?style=flat&logo=dev.to)](https://dev.to/chatman-media/show-your-telegram-group-member-count-in-github-readme-46pl)
 [![X (Twitter)](https://img.shields.io/badge/Tweet-1DA1F2.svg?style=flat&logo=x&logoColor=white)](https://x.com/chatman_media/status/1947399700795244694)
 
 Ce projet génère des badges SVG avec le nombre actuel de membres de vos groupes et chaînes Telegram. Parfait pour afficher l'activité de la communauté dans les fichiers README GitHub ou sur les sites web.
@@ -17,7 +22,7 @@ Ce projet génère des badges SVG avec le nombre actuel de membres de vos groupe
 
 Les groupes et les chaînes utilisent le même point de terminaison API et fonctionnent de manière identique avec ce générateur de badges.
 
-## 🚀 Démarrage Rapide
+## Démarrage Rapide
 
 Utilisez simplement les paramètres d'URL pour générer des badges pour n'importe quel groupe ou chaîne Telegram :
 
@@ -29,7 +34,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@votre_chaine_ou_
 
 ---
 
-## 🛠️ Stack Technologique
+## Stack Technologique
 
 - **Node.js / TypeScript** pour un développement robuste
 - **API Bot Telegram** pour des données en temps réel
@@ -80,7 +85,7 @@ Pour les chaînes privées ou les déploiements personnalisés :
    npm run deploy
    ```
 
-## 🎨 Paramètres de Style
+## Paramètres de Style
 
 Personnalisez l'apparence de votre badge :
 
@@ -116,7 +121,7 @@ Personnalisez l'apparence de votre badge :
 ![Telegram](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@votre_chaine&logo=telegram&logoColor=white)
 ```
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
 - 🔄 **Nombre de membres en temps réel** - Données toujours à jour
 - 🎨 **Entièrement personnalisable** - Couleurs, styles, étiquettes
@@ -127,7 +132,7 @@ Personnalisez l'apparence de votre badge :
 - 📱 **Design Responsive** - Fonctionne sur tous les appareils
 - 🎯 **Configuration Zéro** - Fonctionne immédiatement
 
-## 🔧 Utilisation de l'API
+## Utilisation de l'API
 
 ### En tant que package NPM :
 
@@ -221,7 +226,7 @@ npm run build
 - Les groupes/chaînes privés
 - Les déploiements auto-hébergés
 
-## 🤝 Contribution
+## Contribution
 
 1. Forkez le dépôt
 2. Créez votre branche de fonctionnalité (`git checkout -b feature/amazing-feature`)

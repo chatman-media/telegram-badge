@@ -2,11 +2,16 @@
 
 **Idiomas:** [🇺🇸 English](README.md) | [🇷🇺 Русский](README.ru.md) | [🇩🇪 Deutsch](README.de.md) | [🇫🇷 Français](README.fr.md) | [🇵🇹 Português](README.pt.md) | [🇸🇦 العربية](README.ar.md) | [🇯🇵 日本語](README.ja.md) | [🇰🇷 한국어](README.ko.md) | [🇹🇭 ไทย](README.th.md) | [🇨🇳 中文](README.zh.md)
 
-[![Build Status](https://github.com/chatman-media/telegram-badge/actions/workflows/ci.yml/badge.svg)](https://github.com/chatman-media/telegram-badge/actions/workflows/ci.yml)
-[![npm version](https://badge.fury.io/js/@chatman-media%2Ftelegram-badge.svg)](https://badge.fury.io/js/@chatman-media%2Ftelegram-badge)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-<a href="https://biomejs.dev"><img src="https://img.shields.io/badge/Biome-60A5FA?style=flat&logo=biome&logoColor=white" alt="Biome"></a>
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![Build Status](https://github.com/chatman-media/telegram-badge/workflows/CI/badge.svg)](https://github.com/chatman-media/telegram-badge/actions)
+[![Release](https://github.com/chatman-media/telegram-badge/workflows/Release/badge.svg)](https://github.com/chatman-media/telegram-badge/actions)
+[![npm version](https://img.shields.io/npm/v/telegram-badge.svg)](https://www.npmjs.com/package/telegram-badge)
+[![JSR](https://jsr.io/badges/@chatman-media/telegram-badge)](https://jsr.io/@chatman-media/telegram-badge)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/telegram-badge)](https://bundlephobia.com/package/telegram-badge)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[![GitHub stars](https://img.shields.io/github/stars/chatman-media/telegram-badge?style=social)](https://github.com/chatman-media/telegram-badge)
+[![dev.to](https://img.shields.io/badge/dev.to-Article-0A0A0A.svg?style=flat&logo=dev.to)](https://dev.to/chatman-media/show-your-telegram-group-member-count-in-github-readme-46pl)
 [![X (Twitter)](https://img.shields.io/badge/Tweet-1DA1F2.svg?style=flat&logo=x&logoColor=white)](https://x.com/chatman_media/status/1947399700795244694)
 
 Este proyecto genera insignias SVG con el número actual de miembros de tus grupos y canales de Telegram. Perfecto para mostrar la actividad de la comunidad en archivos README de GitHub o en sitios web.
@@ -17,7 +22,7 @@ Este proyecto genera insignias SVG con el número actual de miembros de tus grup
 
 Tanto los grupos como los canales usan el mismo endpoint de API y funcionan de manera idéntica con este generador de insignias.
 
-## 🚀 Inicio Rápido
+## Inicio Rápido
 
 Simplemente usa parámetros de URL para generar insignias para cualquier grupo o canal de Telegram:
 
@@ -29,7 +34,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@tu_canal_o_grupo
 
 ---
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
 - **Node.js / TypeScript** para desarrollo robusto
 - **API Bot de Telegram** para datos en tiempo real
@@ -80,7 +85,7 @@ Para canales privados o despliegues personalizados:
    npm run deploy
    ```
 
-## 🎨 Parámetros de Estilo
+## Parámetros de Estilo
 
 Personaliza la apariencia de tu insignia:
 
@@ -116,7 +121,7 @@ Personaliza la apariencia de tu insignia:
 ![Telegram](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@tu_canal&logo=telegram&logoColor=white)
 ```
 
-## ✨ Características
+## Características
 
 - 🔄 **Número de miembros en tiempo real** - Datos siempre actualizados
 - 🎨 **Completamente personalizable** - Colores, estilos, etiquetas
@@ -165,7 +170,7 @@ export default badgeHandler;
 GET /api/telegram-badge?channelId=@tu_canal&style=flat&label=Miembros&color=2AABEE&labelColor=555555
 ```
 
-## 🧪 Pruebas
+## Pruebas
 
 Ejecutar la suite de pruebas:
 
@@ -221,7 +226,7 @@ npm run build
 - Grupos/canales privados
 - Despliegues auto-hospedados
 
-## 🤝 Contribuir
+## Contribuir
 
 1. Haz fork del repositorio
 2. Crea tu rama de característica (`git checkout -b feature/amazing-feature`)

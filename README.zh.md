@@ -16,7 +16,7 @@
 
 本项目生成显示 Telegram 群组和频道当前成员数量的 SVG 徽章。非常适合在 GitHub README 文件或网站上展示社区活跃度。
 
-## 🚀 快速开始
+## 快速开始
 
 只需使用 URL 参数即可为任何 Telegram 群组或频道生成徽章：
 
@@ -28,7 +28,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_
 
 ---
 
-## 📦 技术栈
+## 技术栈
 
 - Node.js / TypeScript
 - Telegram Bot API
@@ -37,7 +37,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_
 
 ---
 
-## 🧩 使用方法
+## 使用方法
 
 ### 主要方法：URL 参数（无需任何设置！）
 

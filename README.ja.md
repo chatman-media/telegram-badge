@@ -16,7 +16,7 @@
 
 このプロジェクトは、Telegramグループとチャンネルの現在のメンバー数を表示するSVGバッジを生成します。GitHubのREADMEファイルやウェブサイトでコミュニティの活動を表示するのに最適です。
 
-## 🚀 クイックスタート
+## クイックスタート
 
 URLパラメータを使用して、任意のTelegramグループまたはチャンネルのバッジを生成するだけです：
 
@@ -28,7 +28,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_
 
 ---
 
-## 📦 技術スタック
+## 技術スタック
 
 - Node.js / TypeScript
 - Telegram Bot API
@@ -37,7 +37,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_
 
 ---
 
-## 🧩 使用方法
+## 使用方法
 
 ### プライマリ方法：URLパラメータ（セットアップ不要！）
 

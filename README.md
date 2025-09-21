@@ -22,7 +22,7 @@ This project generates SVG badges with the current member count of your Telegram
 
 Both groups and channels use the same API endpoint and work identically with this badge generator.
 
-## 🚀 Quick Start
+## Quick Start
 
 Just use URL parameters to generate badges for any Telegram group or channel:
 
@@ -34,7 +34,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_
 
 ---
 
-## 📦 Tech Stack
+## Tech Stack
 
 - Node.js / TypeScript
 - Telegram Bot API
@@ -44,7 +44,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_
 
 ---
 
-## 🧩 Usage
+## Usage
 
 ### Primary Method: URL Parameters (No Setup Required!)
 

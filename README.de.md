@@ -2,11 +2,16 @@
 
 **Sprachen:** [🇺🇸 English](README.md) | [🇷🇺 Русский](README.ru.md) | [🇫🇷 Français](README.fr.md) | [🇪🇸 Español](README.es.md) | [🇵🇹 Português](README.pt.md) | [🇸🇦 العربية](README.ar.md) | [🇯🇵 日本語](README.ja.md) | [🇰🇷 한국어](README.ko.md) | [🇹🇭 ไทย](README.th.md) | [🇨🇳 中文](README.zh.md)
 
-[![Build Status](https://github.com/chatman-media/telegram-badge/actions/workflows/ci.yml/badge.svg)](https://github.com/chatman-media/telegram-badge/actions/workflows/ci.yml)
-[![npm version](https://badge.fury.io/js/@chatman-media%2Ftelegram-badge.svg)](https://badge.fury.io/js/@chatman-media%2Ftelegram-badge)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-<a href="https://biomejs.dev"><img src="https://img.shields.io/badge/Biome-60A5FA?style=flat&logo=biome&logoColor=white" alt="Biome"></a>
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![Build Status](https://github.com/chatman-media/telegram-badge/workflows/CI/badge.svg)](https://github.com/chatman-media/telegram-badge/actions)
+[![Release](https://github.com/chatman-media/telegram-badge/workflows/Release/badge.svg)](https://github.com/chatman-media/telegram-badge/actions)
+[![npm version](https://img.shields.io/npm/v/telegram-badge.svg)](https://www.npmjs.com/package/telegram-badge)
+[![JSR](https://jsr.io/badges/@chatman-media/telegram-badge)](https://jsr.io/@chatman-media/telegram-badge)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/telegram-badge)](https://bundlephobia.com/package/telegram-badge)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[![GitHub stars](https://img.shields.io/github/stars/chatman-media/telegram-badge?style=social)](https://github.com/chatman-media/telegram-badge)
+[![dev.to](https://img.shields.io/badge/dev.to-Article-0A0A0A.svg?style=flat&logo=dev.to)](https://dev.to/chatman-media/show-your-telegram-group-member-count-in-github-readme-46pl)
 [![X (Twitter)](https://img.shields.io/badge/Tweet-1DA1F2.svg?style=flat&logo=x&logoColor=white)](https://x.com/chatman_media/status/1947399700795244694)
 
 Dieses Projekt generiert SVG-Badges mit der aktuellen Mitgliederzahl Ihrer Telegram-Gruppen und -Kanäle. Perfekt für die Anzeige von Community-Aktivitäten in GitHub README-Dateien oder auf Websites.
@@ -17,7 +22,7 @@ Dieses Projekt generiert SVG-Badges mit der aktuellen Mitgliederzahl Ihrer Teleg
 
 Sowohl Gruppen als auch Kanäle verwenden denselben API-Endpunkt und funktionieren identisch mit diesem Badge-Generator.
 
-## 🚀 Schnellstart
+## Schnellstart
 
 Verwenden Sie einfach URL-Parameter, um Badges für jede Telegram-Gruppe oder jeden Kanal zu generieren:
 

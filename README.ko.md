@@ -16,7 +16,7 @@
 
 이 프로젝트는 Telegram 그룹과 채널의 현재 멤버 수를 표시하는 SVG 배지를 생성합니다. GitHub README 파일이나 웹사이트에서 커뮤니티 활동을 표시하는 데 완벽합니다.
 
-## 🚀 빠른 시작
+## 빠른 시작
 
 URL 매개변수를 사용하여 모든 Telegram 그룹이나 채널에 대한 배지를 생성하기만 하면 됩니다:
 
@@ -28,7 +28,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_
 
 ---
 
-## 📦 기술 스택
+## 기술 스택
 
 - Node.js / TypeScript
 - Telegram Bot API
@@ -37,7 +37,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_
 
 ---
 
-## 🧩 사용법
+## 사용법
 
 ### 주요 방법: URL 매개변수 (설정 불필요!)
 
