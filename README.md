@@ -17,6 +17,7 @@
 This project generates SVG badges with the current member count of your Telegram groups and channels. Perfect for displaying community activity in GitHub README files or on websites.
 
 **Supports both:**
+
 - 👥 **Telegram Groups** - Interactive communities where all members can send messages
 - 📢 **Telegram Channels** - Broadcast channels where only admins can post messages
 
@@ -55,8 +56,9 @@ Simply add your Telegram group or channel ID to the URL:
 ```
 
 **Works with:**
+
 - Public channels: `@your_channel`
-- Public groups: `@your_group` 
+- Public groups: `@your_group`
 - Private groups/channels: `-1001234567890` (numeric chat ID)
 
 That's it! No deployment, no bot token needed for public groups and channels.
@@ -66,6 +68,7 @@ That's it! No deployment, no bot token needed for public groups and channels.
 For advanced users who want to host their own instance:
 
 #### 1. Prerequisites
+
 - Telegram Bot Token (create via [@BotFather](https://t.me/botfather))
 - Vercel account (or any Node.js hosting)
 
@@ -74,6 +77,7 @@ For advanced users who want to host their own instance:
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fchatman-media%2Ftelegram-badge)
 
 Set environment variables:
+
 - `BOT_TOKEN`: Your Telegram bot token
 - `CHAT_ID`: Default chat ID (optional if using URL parameters)
 
@@ -91,19 +95,18 @@ echo "CHAT_ID=@your_channel" >> .env
 npm run dev
 ```
 
-
 ### Styling Parameters
 
 You can customize the badge appearance using the following parameters:
 
-| Parameter | Description | Default Value |
-|-----------|-------------|---------------|
-| `channelId` | Telegram chat ID or username (e.g., `@your_channel`) | From environment |
-| `style` | Badge style | `flat` |
-| `label` | Label text | `Telegram` |
-| `color` | Main badge color | `2AABEE` (Telegram color) |
-| `labelColor` | Label color | `555555` |
-| `logo` | Show Telegram logo | `true` |
+| Parameter    | Description                                          | Default Value             |
+| ------------ | ---------------------------------------------------- | ------------------------- |
+| `channelId`  | Telegram chat ID or username (e.g., `@your_channel`) | From environment          |
+| `style`      | Badge style                                          | `flat`                    |
+| `label`      | Label text                                           | `Telegram`                |
+| `color`      | Main badge color                                     | `2AABEE` (Telegram color) |
+| `labelColor` | Label color                                          | `555555`                  |
+| `logo`       | Show Telegram logo                                   | `true`                    |
 
 #### Available styles:
 
@@ -116,59 +119,77 @@ You can customize the badge appearance using the following parameters:
 #### Examples:
 
 Standard badge (flat style):
+
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
 ```
+
 ![Flat](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat)
 
 Badge with plastic style:
+
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=plastic
 ```
+
 ![Plastic](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=plastic)
 
 Badge with flat-square style:
+
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=flat-square
 ```
+
 ![Flat-Square](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=flat-square)
 
 Badge with for-the-badge style:
+
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=for-the-badge
 ```
+
 ![For-The-Badge](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=for-the-badge)
 
 Badge with social style:
+
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=social
 ```
+
 ![Social](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=social)
 
 Badge with custom label and color:
+
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&label=Join%20Chat&color=00FF00
 ```
+
 ![Custom](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&label=Join%20Chat&color=00FF00)
 
 Fully customized badge:
+
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=for-the-badge&label=Community&color=FF5733&labelColor=1A1A1A
 ```
+
 ![Full Custom](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&style=for-the-badge&label=Community&color=FF5733&labelColor=1A1A1A)
 
 Badge without logo:
+
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&logo=false
 ```
+
 ![No Logo](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@timelinestudiochat&logo=false)
 
 Badge for specific channel:
+
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
 ```
 
 Badge with custom styling:
+
 ```
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=for-the-badge&color=FF5733
 ```
@@ -194,7 +215,7 @@ npm install telegram-badge
 ```
 
 ```typescript
-import badgeHandler from 'telegram-badge';
+import badgeHandler from "telegram-badge";
 
 // Use in your serverless function
 export default badgeHandler;
@@ -248,12 +269,14 @@ npm run build
 ### What's the difference between Telegram Groups and Channels?
 
 **Telegram Groups:**
+
 - 👥 Interactive communities where all members can send messages
 - Members can see each other and interact
 - Can have up to 200,000 members
 - Example: `@your_group`
 
 **Telegram Channels:**
+
 - 📢 Broadcast channels where only admins can post messages
 - Subscribers cannot see each other
 - Can have unlimited subscribers
@@ -264,9 +287,11 @@ npm run build
 ### How do I find my Group/Channel ID?
 
 **For public groups/channels:**
+
 - Use the username: `@your_channel` or `@your_group`
 
 **For private groups/channels:**
+
 - Use a bot like [@userinfobot](https://t.me/userinfobot)
 - Forward any message from your group/channel to the bot
 - It will show the chat ID (like `-1001234567890`)
@@ -276,6 +301,7 @@ npm run build
 **No bot token needed** for public groups and channels when using the hosted service at `telegram-badge.vercel.app`.
 
 **Bot token required** only for:
+
 - Private groups/channels
 - Self-hosted deployments
 
@@ -289,7 +315,34 @@ npm run build
 
 ## Subscribe
 
+<table>
+<tr>
+<td>
+
 [![Stack Overflow profile](https://stackoverflow-readme-profile.johannchopin.fr/profile/724036?theme=dark)](https://stackoverflow.com/users/724036/alexander-kireyev)
+
+</td>
+<td>
+
+<table>
+<tr>
+<td>
+  <a href="https://github.com/chatman-media">
+    <img src="https://github.com/chatman-media.png?size=86" width="86" height="86" />
+  </a>
+</td>
+<td width="400">
+
+**chatman**  
+![Repos](https://img.shields.io/badge/dynamic/json?color=blue&label=Repos&query=public_repos&url=https://api.github.com/users/chatman-media) ![Followers](https://img.shields.io/badge/dynamic/json?color=green&label=Followers&query=followers&url=https://api.github.com/users/chatman-media) [![Thailand Rank](https://user-badge.committers.top/thailand/chatman-media.svg)](https://user-badge.committers.top/thailand/chatman-media)
+
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
 
 [![GitHub Followers](https://img.shields.io/github/followers/chatman-media?style=social)](https://github.com/chatman-media)
 [![TikTok](https://img.shields.io/badge/TikTok-000000?logo=tiktok&logoColor=white&labelColor=1c1917)](https://www.tiktok.com/@chatman.media)
