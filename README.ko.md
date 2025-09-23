@@ -84,7 +84,7 @@ echo "CHAT_ID=@your_channel" >> .env
 npm run dev
 ```
 
-### 🎨 스타일링 매개변수
+### 스타일링 매개변수
 
 다음 매개변수를 사용하여 배지 외관을 사용자 지정할 수 있습니다:
 
@@ -165,7 +165,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=for-the-badge&color=FF5733
 ```
 
-## ✨ 기능
+## 기능
 
 - 👥 실시간 멤버 수 표시
 - 🔗 직접 URL 매개변수 - 설정 불필요!
@@ -177,7 +177,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&sty
 - 📡 활동/메시지 수 표시로 확장 가능
 - 🧪 TypeScript를 통한 포괄적인 테스트 스위트
 
-## 🔧 API 사용
+## API 사용
 
 ### npm 패키지로:
 
@@ -198,7 +198,7 @@ export default badgeHandler;
 GET /api/telegram-badge?style=flat&label=멤버&color=2AABEE&labelColor=555555
 ```
 
-## 🧪 테스트
+## 테스트
 
 테스트 스위트 실행:
 
@@ -206,7 +206,7 @@ GET /api/telegram-badge?style=flat&label=멤버&color=2AABEE&labelColor=555555
 npm test
 ```
 
-## 🤝 기여
+## 기여
 
 1. 저장소를 포크하세요
 2. 기능 브랜치를 생성하세요 (`git checkout -b feature/amazing-feature`)
@@ -254,7 +254,7 @@ npm test
 
 ![Alt](https://repobeats.axiom.co/api/embed/74975e0da934ce1756e69f04fe68f2b026a77aee.svg "Repobeats analytics image")
 
-## 📜 라이선스
+## 라이선스
 
 이 프로젝트는 MIT 라이선스에 따라 배포됩니다. 자세한 내용은 [LICENSE](LICENSE)를 참조하세요.
 

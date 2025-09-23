@@ -84,7 +84,7 @@ echo "CHAT_ID=@your_channel" >> .env
 npm run dev
 ```
 
-### 🎨 معلمات التنسيق
+### معلمات التنسيق
 
 يمكنك تخصيص مظهر الشارة باستخدام المعلمات التالية:
 
@@ -165,7 +165,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=for-the-badge&color=FF5733
 ```
 
-## ✨ المميزات
+## المميزات
 
 - 👥 عرض عدد الأعضاء في الوقت الفعلي
 - 🔗 معلمات URL المباشرة - لا يتطلب إعداد!
@@ -177,7 +177,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&sty
 - 📡 يمكن توسيعه لعرض النشاط/عدد الرسائل
 - 🧪 مجموعة اختبار شاملة مع TypeScript
 
-## 🔧 استخدام API
+## استخدام API
 
 ### كحزمة npm:
 
@@ -198,7 +198,7 @@ export default badgeHandler;
 GET /api/telegram-badge?style=flat&label=الأعضاء&color=2AABEE&labelColor=555555
 ```
 
-## 🧪 الاختبار
+## الاختبار
 
 تشغيل مجموعة الاختبارات:
 
@@ -206,7 +206,7 @@ GET /api/telegram-badge?style=flat&label=الأعضاء&color=2AABEE&labelColor=
 npm test
 ```
 
-## 🤝 المساهمة
+## المساهمة
 
 1. قم بعمل Fork للمستودع
 2. أنشئ فرع ميزة (`git checkout -b feature/amazing-feature`)
@@ -254,7 +254,7 @@ npm test
 
 ![Alt](https://repobeats.axiom.co/api/embed/74975e0da934ce1756e69f04fe68f2b026a77aee.svg "Repobeats analytics image")
 
-## 📜 الرخصة
+## الرخصة
 
 هذا المشروع مرخّص بموجب رخصة MIT - راجع ملف [LICENSE](LICENSE) لمزيد من التفاصيل.
 

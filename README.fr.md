@@ -42,7 +42,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@votre_chaine_ou_
 - **Jest** pour les tests
 - **Biome** pour le linting et le formatage
 
-## 📖 Utilisation
+## Utilisation
 
 ### Méthode Principale : Paramètres d'URL (Aucune Configuration Requise !)
 
@@ -170,7 +170,7 @@ export default badgeHandler;
 GET /api/telegram-badge?channelId=@votre_chaine&style=flat&label=Membres&color=2AABEE&labelColor=555555
 ```
 
-## 🧪 Tests
+## Tests
 
 Exécuter la suite de tests :
 
@@ -190,7 +190,7 @@ Construire le projet :
 npm run build
 ```
 
-## ❓ FAQ
+## FAQ
 
 ### Quelle est la différence entre les groupes et chaînes Telegram ?
 
@@ -277,7 +277,7 @@ npm run build
 
 ![Alt](https://repobeats.axiom.co/api/embed/74975e0da934ce1756e69f04fe68f2b026a77aee.svg "Repobeats analytics image")
 
-## 📜 Licence
+## Licence
 
 Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 

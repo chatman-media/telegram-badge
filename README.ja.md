@@ -84,7 +84,7 @@ echo "CHAT_ID=@your_channel" >> .env
 npm run dev
 ```
 
-### 🎨 スタイリングパラメータ
+### スタイリングパラメータ
 
 以下のパラメータを使用してバッジの外観をカスタマイズできます：
 
@@ -165,7 +165,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=for-the-badge&color=FF5733
 ```
 
-## ✨ 機能
+## 機能
 
 - 👥 リアルタイムメンバー数表示
 - 🔗 直接URLパラメータ - セットアップ不要！
@@ -177,7 +177,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&sty
 - 📡 アクティビティ/メッセージ数表示に拡張可能
 - 🧪 TypeScriptによる包括的テストスイート
 
-## 🔧 APIの使用
+## APIの使用
 
 ### npmパッケージとして：
 
@@ -198,7 +198,7 @@ export default badgeHandler;
 GET /api/telegram-badge?style=flat&label=メンバー&color=2AABEE&labelColor=555555
 ```
 
-## 🧪 テスト
+## テスト
 
 テストスイートを実行：
 
@@ -206,7 +206,7 @@ GET /api/telegram-badge?style=flat&label=メンバー&color=2AABEE&labelColor=55
 npm test
 ```
 
-## 🤝 貢献
+## 貢献
 
 1. リポジトリをフォークする
 2. 機能ブランチを作成する（`git checkout -b feature/amazing-feature`）
@@ -254,7 +254,7 @@ npm test
 
 ![Alt](https://repobeats.axiom.co/api/embed/74975e0da934ce1756e69f04fe68f2b026a77aee.svg "Repobeats analytics image")
 
-## 📜 ライセンス
+## ライセンス
 
 このプロジェクトは MIT ライセンスの下で提供されています。詳細は [LICENSE](LICENSE) を参照してください。
 

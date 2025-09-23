@@ -92,7 +92,7 @@ npm run dev
 ```
 
 
-### 🎨 Styling Parameters
+### Styling Parameters
 
 You can customize the badge appearance using the following parameters:
 
@@ -173,7 +173,7 @@ Badge with custom styling:
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=for-the-badge&color=FF5733
 ```
 
-## ✨ Features
+## Features
 
 - 👥 Real-time member count display
 - 🔗 Direct URL parameters - no setup required!
@@ -185,7 +185,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&sty
 - 📡 Can be extended to show activity/message count
 - 🧪 Comprehensive test suite with TypeScript
 
-## 🔧 API Usage
+## API Usage
 
 ### As npm package:
 
@@ -223,7 +223,7 @@ export default badgeHandler;
 GET /api/telegram-badge?channelId=@your_channel&style=flat&label=Members&color=2AABEE&labelColor=555555
 ```
 
-## 🧪 Testing
+## Testing
 
 Run the test suite:
 
@@ -243,7 +243,7 @@ Build the project:
 npm run build
 ```
 
-## ❓ FAQ
+## FAQ
 
 ### What's the difference between Telegram Groups and Channels?
 
@@ -279,7 +279,7 @@ npm run build
 - Private groups/channels
 - Self-hosted deployments
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
@@ -330,7 +330,7 @@ npm run build
 
 ![Alt](https://repobeats.axiom.co/api/embed/74975e0da934ce1756e69f04fe68f2b026a77aee.svg "Repobeats analytics image")
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 

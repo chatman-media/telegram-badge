@@ -42,7 +42,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@ihr_kanal_oder_g
 - **Jest** für Tests
 - **Biome** für Linting und Formatierung
 
-## 📖 Verwendung
+## Verwendung
 
 ### Primäre Methode: URL-Parameter (Keine Einrichtung erforderlich!)
 
@@ -85,7 +85,7 @@ Für private Kanäle oder benutzerdefinierte Bereitstellungen:
    npm run deploy
    ```
 
-## 🎨 Styling-Parameter
+## Styling-Parameter
 
 Passen Sie das Aussehen Ihres Badges an:
 
@@ -121,7 +121,7 @@ Passen Sie das Aussehen Ihres Badges an:
 ![Telegram](https://telegram-badge.vercel.app/api/telegram-badge?channelId=@ihr_kanal&logo=telegram&logoColor=white)
 ```
 
-## ✨ Features
+## Features
 
 - 🔄 **Echtzeit-Mitgliederzahl** - Immer aktuelle Daten
 - 🎨 **Vollständig anpassbar** - Farben, Stile, Labels
@@ -132,7 +132,7 @@ Passen Sie das Aussehen Ihres Badges an:
 - 📱 **Responsive Design** - Funktioniert auf allen Geräten
 - 🎯 **Null-Konfiguration** - Funktioniert sofort
 
-## 🔧 API-Verwendung
+## API-Verwendung
 
 ### Als NPM-Paket:
 
@@ -170,7 +170,7 @@ export default badgeHandler;
 GET /api/telegram-badge?channelId=@ihr_kanal&style=flat&label=Mitglieder&color=2AABEE&labelColor=555555
 ```
 
-## 🧪 Tests
+## Tests
 
 Test-Suite ausführen:
 
@@ -190,7 +190,7 @@ Projekt erstellen:
 npm run build
 ```
 
-## ❓ FAQ
+## FAQ
 
 ### Was ist der Unterschied zwischen Telegram-Gruppen und -Kanälen?
 
@@ -226,7 +226,7 @@ npm run build
 - Private Gruppen/Kanäle
 - Selbst gehostete Bereitstellungen
 
-## 🤝 Mitwirken
+## Mitwirken
 
 1. Repository forken
 2. Feature-Branch erstellen (`git checkout -b feature/amazing-feature`)
@@ -277,7 +277,7 @@ npm run build
 
 ![Alt](https://repobeats.axiom.co/api/embed/74975e0da934ce1756e69f04fe68f2b026a77aee.svg "Repobeats analytics image")
 
-## 📜 Lizenz
+## Lizenz
 
 Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die [LICENSE](LICENSE)-Datei für Details.
 

@@ -85,7 +85,7 @@ npm run dev
 ```
 
 
-### 🎨 样式参数
+### 样式参数
 
 您可以使用以下参数自定义徽章外观：
 
@@ -166,7 +166,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel
 https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&style=for-the-badge&color=FF5733
 ```
 
-## ✨ 功能特性
+## 功能特性
 
 - 👥 实时显示成员数量
 - 🔗 直接 URL 参数 - 无需任何设置！
@@ -178,7 +178,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel&sty
 - 📡 可扩展显示活动/消息计数
 - 🧪 使用 TypeScript 的完整测试套件
 
-## 🔧 API 使用
+## API 使用
 
 ### 作为 npm 包：
 
@@ -199,7 +199,7 @@ export default badgeHandler;
 GET /api/telegram-badge?style=flat&label=成员&color=2AABEE&labelColor=555555
 ```
 
-## 🧪 测试
+## 测试
 
 运行测试套件：
 
@@ -229,7 +229,7 @@ npm run build
  </picture>
 </a>
 
-## 🤝 贡献
+## 贡献
 
 1. Fork 本仓库
 2. 创建您的功能分支（`git checkout -b feature/amazing-feature`）
@@ -267,7 +267,7 @@ npm run build
 
 ![Alt](https://repobeats.axiom.co/api/embed/74975e0da934ce1756e69f04fe68f2b026a77aee.svg "Repobeats analytics image")
 
-## 📜 许可证
+## 许可证
 
 本项目根据 MIT 许可证获得许可 - 有关详细信息，请参阅 [LICENSE](LICENSE) 文件。
 

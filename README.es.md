@@ -42,7 +42,7 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@tu_canal_o_grupo
 - **Jest** para pruebas
 - **Biome** para linting y formateo
 
-## 📖 Uso
+## Uso
 
 ### Método Principal: Parámetros de URL (¡Sin Configuración Requerida!)
 
@@ -132,7 +132,7 @@ Personaliza la apariencia de tu insignia:
 - 📱 **Diseño Responsivo** - Funciona en todos los dispositivos
 - 🎯 **Configuración Cero** - Funciona inmediatamente
 
-## 🔧 Uso de la API
+## Uso de la API
 
 ### Como paquete NPM:
 
@@ -190,7 +190,7 @@ Construir el proyecto:
 npm run build
 ```
 
-## ❓ FAQ
+## FAQ
 
 ### ¿Cuál es la diferencia entre grupos y canales de Telegram?
 
@@ -277,7 +277,7 @@ npm run build
 
 ![Alt](https://repobeats.axiom.co/api/embed/74975e0da934ce1756e69f04fe68f2b026a77aee.svg "Repobeats analytics image")
 
-## 📜 Licencia
+## Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
 
