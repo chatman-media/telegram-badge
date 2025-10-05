@@ -354,17 +354,17 @@ npm run build
 ## Support 💝🚀
 
 - **BTC:** 14s9Y9Rb2CUWHSAatiQMhfkpx1MWXofUzw
-- **TON:** UQD1M80nPyzph5ZW1vfp_r19XI5MaerNhDq4dWXbXCo96WFj
-- **NOT:** UQD1M80nPyzph5ZW1vfp_r19XI5MaerNhDq4dWXbXCo96WFj
+- **TON:** UQBx7Sgtn5q_PzwUAjvnA_lj9CQx1NhN9JDi3abOgpRYnAnr
+- **NOT:** UQBx7Sgtn5q_PzwUAjvnA_lj9CQx1NhN9JDi3abOgpRYnAnr
 - **ETH:** 0x286D65151b622dCC16624cEd8463FDa45585fd60
 
 <div align="center">
   <table>
     <tr>
-      <td><img src="public/btc.png" alt="BTC" height="185" /></td>
-      <td><img src="public/ton.png" alt="TON" height="185" /></td>
-      <td><img src="public/not.png" alt="NOT" height="185" /></td>
-      <td><img src="public/eth.png" alt="ETH" height="185" /></td>
+      <td><img src="public/btc.png" alt="BTC" height="185" width="185" /></td>
+      <td><img src="public/ton.png" alt="TON" height="185" width="185" /></td>
+      <td><img src="public/not.png" alt="NOT" height="185" width="185" /></td>
+      <td><img src="public/eth.png" alt="ETH" height="185" width="185" /></td>
     </tr>
   </table>
 </div>
