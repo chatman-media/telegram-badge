@@ -7,7 +7,7 @@
 [![npm version](https://img.shields.io/npm/v/telegram-badge.svg)](https://www.npmjs.com/package/telegram-badge)
 [![JSR](https://jsr.io/badges/@chatman-media/telegram-badge)](https://jsr.io/@chatman-media/telegram-badge)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/telegram-badge)](https://bundlephobia.com/package/telegram-badge)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [![GitHub stars](https://img.shields.io/github/stars/chatman-media/telegram-badge?style=social)](https://github.com/chatman-media/telegram-badge)
@@ -15,6 +15,8 @@
 [![X (Twitter)](https://img.shields.io/badge/Tweet-1DA1F2.svg?style=flat&logo=x&logoColor=white)](https://x.com/chatman_media/status/1947399700795244694)
 
 This project generates SVG badges with the current member count of your Telegram groups and channels. Perfect for displaying community activity in GitHub README files or on websites.
+
+> **[Try the live generator →](https://telegram-badge.vercel.app/)** — build and copy your badge in seconds, no setup required.
 
 **Supports both:**
 
@@ -37,11 +39,12 @@ https://telegram-badge.vercel.app/api/telegram-badge?channelId=@your_channel_or_
 
 ## Tech Stack
 
-- Node.js / TypeScript
+- Node.js 20+ / TypeScript 6
 - Telegram Bot API
 - Vercel (Serverless API)
 - Jest for testing
 - Biome for linting and formatting
+- Distributed on both npm and JSR
 
 ---
 
