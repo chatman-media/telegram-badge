@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/chatman-media/telegram-badge/compare/v1.5.0...v1.6.0) (2026-06-28)
+
+
+### Features
+
+* modernize landing page, refresh favicon, fix TS6/Biome2.5 build ([8eb83aa](https://github.com/chatman-media/telegram-badge/commit/8eb83aa62a0f8cbd125a9f8b9e75b2970aa0148f))
+
 # [1.5.0](https://github.com/chatman-media/telegram-badge/compare/v1.4.1...v1.5.0) (2025-09-21)
 
 
